@@ -1,0 +1,38 @@
+/* global style */
+
+body {
+    font-family: karla, sans-serif;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+}
+
+/* heading */
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* Game area */
+
+.game-area {
+    background-color: #1a1a1a;
+    box-sizing: border-box;
+    width: 85%;
+    height: 85%;
+    max-height: 1100px;
+    max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1px;
+    color: #fcf403
+}
+
+.question.area {
+    width: 50%;
+    font-size: 15px;
+    font-family: Merriweather, sans-serif;
+    margin: auto;
+    padding: 50px 0;
+}

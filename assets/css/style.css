@@ -31,11 +31,11 @@ body {
 }
 
 .question-area {
-    width: 50%;
+    width: 75%;
     font-size: 30px;
     font-family: Merriweather, sans-serif;
     margin: auto;
-    padding: 50px 0;
+    padding: 100px 0;
 }
 
 .question-area span {
@@ -52,6 +52,7 @@ body {
 .answer-box {
     display: inline-block;
     height: 35px;
+    font-size: 30px;
 }
 /* Buttons */
 
@@ -146,8 +147,23 @@ body {
     font-size: 25px;
     border: 2px solid black;
 }
-
 .submit:active,
 .submit:hover {
     background-color: red
+}
+
+/* score area */
+
+.score-area {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+}
+
+#score {
+    color: green;
+}
+
+#incorrect-score {
+    color: red;
 }

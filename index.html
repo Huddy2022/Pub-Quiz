@@ -15,19 +15,21 @@
 </head>
 <body>
     <h1 class="heading"> <i class="fa-solid fa-beer-mug-empty"></i> Pub Quiz </h1>
-    <div class="game-area">Game Area
+    <div class="game-area">
         <div class="controls-area">
-            <button class="btn btn--big btn--green"><i class="fa-solid fa-baseball-bat-ball"></i></button>
-            <button class="btn btn--big btn--blue"><i class="fa-solid fa-film"></i></button>
-            <button class="btn btn--big btn--purple"><i class="fa-solid fa-earth-americas"></i></button>
-            <button class="btn btn--big btn--red"><i class="fa-solid fa-landmark"></i></button>
+            <button data-type="Sports" class="btn btn--big btn--green"><i class="fa-solid fa-baseball-bat-ball"></i></button>
+            <button data-type="Movies" class="btn btn--big btn--blue"><i class="fa-solid fa-film"></i></button>
+            <button data-type="Geography" class="btn btn--big btn--purple"><i class="fa-solid fa-earth-americas"></i></button>
+            <button data-type="History" class="btn btn--big btn--red"><i class="fa-solid fa-landmark"></i></button>
         </div>
         <div class="question-area">
-            <span>operator1</span>
-            <span>=</span>
-            <p>Enter Answer</p>
+            <span>operand1</span>
+            <span>?</span>
         <input class="answer-box" type="text"></div>
-        <button class="submit">Submit Answer</button>
+        <div id="submit-button">
+            <button class="submit">Submit Answer</button>
+        </div>
+        
     </div>
     <div class="score-area">Score Area</div>
     

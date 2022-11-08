@@ -18,35 +18,41 @@ body {
 /* Game area */
 
 .game-area {
-    background-color: #1a1a1a;
+    background-color: #A7A5A5;
     box-sizing: border-box;
     width: 85%;
-    height: 85%;
+    height: 600px;
     max-height: 1100px;
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
     padding: 1px;
-    color: #fcf403
+    color: black;
 }
 
-.question.area {
+.question-area {
     width: 50%;
-    font-size: 15px;
+    font-size: 30px;
     font-family: Merriweather, sans-serif;
     margin: auto;
     padding: 50px 0;
 }
 
-.question.area span {
+.question-area span {
     padding: 0 15px;
 }
 
 .controls-area {
     width: 825px;
     margin: 30px auto;
+    margin-top: 50px;
+
 }
 
+.answer-box {
+    display: inline-block;
+    height: 35px;
+}
 /* Buttons */
 
 .btn {
@@ -59,6 +65,7 @@ body {
 .btn--big {
     border-radius: 50%;
     padding: 10px;
+    padding-top: 25px;
     border: 10px solid;
     transition: all;
     height: 150px;
@@ -67,6 +74,18 @@ body {
     font-size: 70px;
 }
 
+.btn--big::after {
+    content: attr(data-type);
+    font-size: 30px;
+    position: relative;
+    padding-top: 10%;
+    color: black;
+}
+.btn--purple::after {
+    content: attr(data-type);
+    position: relative;
+    right: 15px;
+}
 .btn--blue {
     border-color: blue;
     color: blue;
@@ -109,4 +128,26 @@ body {
 .btn--red:hover {
     background-color: darkred;
     color: white;
+}
+
+#submit-button {
+    margin: auto;
+    text-align: center;
+}
+.submit {
+    border-radius: 25%;
+    background-color: #fcf403;
+    border: 1px transparent;
+    width: 300px;
+    height: 75px;
+    margin: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 25px;
+    border: 2px solid black;
+}
+
+.submit:active,
+.submit:hover {
+    background-color: red
 }

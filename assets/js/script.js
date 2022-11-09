@@ -15,20 +15,38 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-runGame()
+function runGame() {
 
-checkAnswer()
+}
 
-calucalteCorrectAnswer()
+function checkAnswer() {
 
-increment+Score()
+}
 
-incrment+WrongAnswer()
+function calucalteCorrectAnswer() {
 
-displaySportQuestion()
+}
 
-displayMoviesQuestion()
+function incrementScore() {
 
-displayGeographyQuestion()
+}
 
-displayHisotryQuestion()
+function incrmentWrongAnswer() {
+
+}
+
+function displaySportQuestion() {
+
+}
+
+function displayMoviesQuestion() {
+
+}
+
+function displayGeographyQuestion() {
+
+}
+
+function displayHisotryQuestion() {
+
+}

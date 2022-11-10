@@ -28,12 +28,8 @@ function runGame(gameType) {
     let print = document.getElementById('operand1')
 
     if(gameType === "Sports") {
-        
-        if (myIndex < sportsQuestion.length) {
-                    print.innerHTML = sportsQuestion[myIndex]; myIndex++;
-        } else {
-            myIndex = 0;
-        }
+        let randomSportsQuestion= Math.floor(Math.random() * sportsQuestion.length);
+        print.innerHTML = sportsQuestion[randomSportsQuestion];
     }
     else {
         alert(`unkown game type ${gameType}`);

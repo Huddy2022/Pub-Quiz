@@ -23,6 +23,35 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 function runGame(gameType) {
 
+    
+    
+
+    if(gameType === "Sports") {
+        displaySportsQuestion();
+    }
+    else {
+        alert(`unkown game type ${gameType}`);
+    }
+
+}
+
+function checkAnswer() {
+
+}
+
+function calucalteCorrectAnswer() {
+
+}
+
+function incrementScore() {
+
+}
+
+function incrmentWrongAnswer() {
+
+}
+
+function displaySportsQuestion() {
     let sportsQuestion = [
         { question: "Which country won the 2019 Rugby World Cup?",
           optionA: "South Africa",
@@ -86,38 +115,10 @@ function runGame(gameType) {
         },
              ];
 
-    let print = document.getElementById('display-question');
-    let sQuestion = sportsQuestion['question'];
-
-    if(gameType === "Sports") {
-        let randomSportsQuestion= Math.floor(Math.random() * sQuestion.length);
-        print.innerHTML = sQuestion[randomSportsQuestion];
-    }
-    else {
-        alert(`unkown game type ${gameType}`);
-    }
-
-}
-
-function checkAnswer() {
-
-}
-
-function calucalteCorrectAnswer() {
-
-}
-
-function incrementScore() {
-
-}
-
-function incrmentWrongAnswer() {
-
-}
-
-function displaySportsQuestion(operand1) {
-    document.getElementById('operand1').textContent = operand1;
-
+    document.getElementById("display-question").innerHTML = sportsQuestion.question;
+    document.getElementById("option1").innerHTML = sportsQuestion.optionA
+    document.getElementById("option2").innerHTML = sportsQuestion.optionB
+    document.getElementById("option3").innerHTML = sportsQuestion.optionC
 }
 
 function displayMoviesQuestion() {

@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
 function runGame(gameType) {
 
     let sportsQuestion = ["Who has won more Grand Slams, Roger Federer or Serena Williams?", "Which country won the 2019 Rugby World Cup?", "How many F1 championships has Lewis Hamilton won?", "How many balls are in total are there on the table at the start of a game of snooker, including the white?", "What colours are the five Olympic rings?", "What is Usain Bolts world record time for 100m?", "Which team did Kobe Bryant spend his basketball career with?","Which country did F1 legend Ayrton Senna come from?", "Who has scored the most Premier League hat-tricks?", "Who did Cristiano Ronaldo make his Premier League debut against in 2003?"];
-    let myIndex = 0;
     let print = document.getElementById('operand1')
 
     if(gameType === "Sports") {

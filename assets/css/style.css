@@ -160,10 +160,7 @@ body {
     font-size: 30px;
 }
 
-#score {
-    color: green;
-}
-
-#incorrect-score {
-    color: red;
+.score-area p {
+    display: inline-block;
+    padding: 15px;
 }

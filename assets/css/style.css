@@ -21,25 +21,13 @@ body {
     background-color: #A7A5A5;
     box-sizing: border-box;
     width: 85%;
-    height: 600px;
+    height: 650px;
     max-height: 1100px;
     max-width: 1100px;
     margin-right: auto;
     margin-left: auto;
     padding: 1px;
     color: black;
-}
-
-.question-area {
-    width: 75%;
-    font-size: 30px;
-    font-family: Merriweather, sans-serif;
-    margin: auto;
-    padding: 100px 0;
-}
-
-.question-area span {
-    padding: 0 15px;
 }
 
 .controls-area {
@@ -49,10 +37,51 @@ body {
 
 }
 
-.answer-box {
-    display: inline-block;
-    height: 35px;
+.question-area {
+    width: 75%;
+    height: 50px;
     font-size: 30px;
+    font-family: Merriweather, sans-serif;
+    border: 2px solid yellow;
+    border-radius: 25%;
+    background-color: black;
+    color: white;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 10px;
+    align-items: center;
+}
+
+.options-area {
+    width: 75%;
+    height: 150px;
+    font-size: 30px;
+    font-family: Merriweather, sans-serif;
+    border: 2px solid yellow;
+    border-radius: 25%;
+    background-color: black;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 10px;
+    align-items: center;
+}
+
+#option1, #option2, #option3 {
+    display: block;
+    background-color: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 25%;
+    position: relative;
+    float: left;
+    text-align: center;
+    left: 15%;
+    margin-right: 10%;
+    margin-top: 6%;
+}
+
+#option1:hover, #option2:hover, #option3:hover {
+    background-color: green;
 }
 /* Buttons */
 
@@ -131,11 +160,17 @@ body {
     color: white;
 }
 
-#submit-button {
+#button-container {
+    position: relative;
+}
+
+#submit-button, #next-button {
+    float: left;
     margin: auto;
     text-align: center;
+    width: 50%;
 }
-.submit {
+.submit, .next-question {
     border-radius: 25%;
     background-color: #fcf403;
     border: 1px transparent;
@@ -149,6 +184,11 @@ body {
 }
 .submit:active,
 .submit:hover {
+    background-color: red
+}
+
+.next-question:active,
+.next-question:hover {
     background-color: red
 }
 

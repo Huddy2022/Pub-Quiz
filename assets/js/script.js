@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (this.getAttribute("data-type") === "submit") {
                 alert("you clicked submit");
             } else if (this.getAttribute("data-type") === "next-question") {
-                alert("you clicked next question");
+                nextQuestion();
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
@@ -53,10 +53,6 @@ function incrmentWrongAnswer() {
 
 }
 
-function nextQuestion() {
-    document.GetElementsByClassName("next-question") = i++
-
-}
 function displaySportsQuestion() {
     let sportsQuestion = [
         { question: ["Which country won the 2019 Rugby World Cup?"],
@@ -120,12 +116,11 @@ function displaySportsQuestion() {
            correctOption: ["optionC"]
         },
              ];
-    let i = 0
 
-    document.getElementById("display-question").innerHTML = sportsQuestion[i].question;
-    document.getElementById("option1").innerHTML = sportsQuestion[i].optionA;
-    document.getElementById("option2").innerHTML = sportsQuestion[i].optionB;
-    document.getElementById("option3").innerHTML = sportsQuestion[i].optionC; 
+    document.getElementById("display-question").innerHTML = sportsQuestion[0].question;
+    document.getElementById("option1").innerHTML = sportsQuestion[0].optionA;
+    document.getElementById("option2").innerHTML = sportsQuestion[0].optionB;
+    document.getElementById("option3").innerHTML = sportsQuestion[0].optionC; 
     
 }
 
@@ -139,4 +134,10 @@ function displayGeographyQuestion() {
 
 function displayHisotryQuestion() {
 
+}
+
+function nextQuestion() {
+    if (gameType === "Sports") {
+        sportsQuestion+1;
+    }
 }

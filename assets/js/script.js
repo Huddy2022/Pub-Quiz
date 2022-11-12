@@ -53,7 +53,7 @@ function incrmentWrongAnswer() {
 
 function displaySportsQuestion() {
     let sportsQuestion = [
-        { question: "Which country won the 2019 Rugby World Cup?",
+        { question: ["Which country won the 2019 Rugby World Cup?"],
           optionA: "South Africa",
           optionB: "England",
           optionC: "Wales",
@@ -115,10 +115,10 @@ function displaySportsQuestion() {
         },
              ];
 
-    document.getElementById("display-question").innerHTML = sportsQuestion.question;
-    document.getElementById("option1").innerHTML = sportsQuestion.optionA
-    document.getElementById("option2").innerHTML = sportsQuestion.optionB
-    document.getElementById("option3").innerHTML = sportsQuestion.optionC
+    document.getElementById("display-question").innerHTML = sportsQuestion[0].question[0];
+    document.getElementById("option1").innerHTML = sportsQuestion.optionA;
+    document.getElementById("option2").innerHTML = sportsQuestion.optionB;
+    document.getElementById("option3").innerHTML = sportsQuestion.optionC;
 }
 
 function displayMoviesQuestion() {

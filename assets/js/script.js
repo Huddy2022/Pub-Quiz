@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (this.getAttribute("data-type") === "submit") {
                 alert("you clicked submit");
             } else if (this.getAttribute("data-type") === "next-question") {
-                nextQuestion();
+                alert("you clicked next question")
             } else {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
@@ -140,10 +140,4 @@ function displayHisotryQuestion() {
 }
 
 function nextQuestion() {
-
-    let currentQuestion = SportsQuestion;
-    document.getElementById("display-question").innerHTML = currentQuestion.question;
-    document.getElementById("option1").innerHTML = currentQuestion.optionA;
-    document.getElementById("option2").innerHTML = currentQuestion.optionB;
-    document.getElementById("option3").innerHTML = currentQuestion.optionC;
 }

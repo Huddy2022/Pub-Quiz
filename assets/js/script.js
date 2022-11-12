@@ -54,7 +54,9 @@ function incrmentWrongAnswer() {
 }
 
 function displaySportsQuestion() {
+
     let sportsQuestion = [
+
         { question: ["Which country won the 2019 Rugby World Cup?"],
           optionA: ["South Africa"],
           optionB: ["England"],
@@ -115,7 +117,8 @@ function displaySportsQuestion() {
            optionC: ["Floyd Mayweather"],
            correctOption: ["optionC"]
         },
-             ];
+
+    ]
 
     document.getElementById("display-question").innerHTML = sportsQuestion[0].question;
     document.getElementById("option1").innerHTML = sportsQuestion[0].optionA;
@@ -137,7 +140,10 @@ function displayHisotryQuestion() {
 }
 
 function nextQuestion() {
-    if (gameType === "Sports") {
-        sportsQuestion+1;
-    }
+
+    let currentQuestion = SportsQuestion;
+    document.getElementById("display-question").innerHTML = currentQuestion.question;
+    document.getElementById("option1").innerHTML = currentQuestion.optionA;
+    document.getElementById("option2").innerHTML = currentQuestion.optionB;
+    document.getElementById("option3").innerHTML = currentQuestion.optionC;
 }

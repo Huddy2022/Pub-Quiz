@@ -79,15 +79,16 @@ body {
 #option1, #option2, #option3 {
     display: block;
     background-color: white;
-    width: 150px;
+    width: 250px;
     height: 40px;
     border-radius: 25%;
     position: relative;
     float: left;
     text-align: center;
-    left: 15%;
-    margin-right: 10%;
+    left: 3%;
+    margin-right: 10px;
     margin-top: 6%;
+    font-size: 30px;
 }
 
 #option1:hover, #option2:hover, #option3:hover {

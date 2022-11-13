@@ -1,8 +1,13 @@
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
-const sportsQuestion = [
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("page has loaded")
+    runGame()
+});
 
-    { question: ["Which country won the 2019 Rugby World Cup?"],
+const sportsQuestions = [
+
+   { question: ["Which country won the 2019 Rugby World Cup?"],
       optionA: ["South Africa"],
       optionB: ["England"],
       optionC: ["Wales"],
@@ -61,32 +66,78 @@ const sportsQuestion = [
        optionB: ["Tyson Furry"],
        optionC: ["Floyd Mayweather"],
        correctOption: ["optionC"]
-    },
+    }, 
 
 ]
 
+const moviesQuestions = [
+
+    { question: ["What is the name of the actor who plays the new 007 in the upcoming Bond film No Time To Die?"],
+       optionA: ["Lashana Lynch"],
+       optionB: ["Penélope Cruz"],
+       optionC: ["Halle Berry"],
+       correctOption: ["optionA"]
+      },
+      { question: ["How many Steven Spielberg films has Tom Hanks starred in?"],
+        optionA: ["4"],
+        optionB: ["5"],
+        optionC: ["7"],
+        correctOption: ["optionB"]
+     },
+     { question: ["What year was the first Toy Story film released in cinemas?"],
+        optionA: ["1995"],
+        optionB: ["1997"],
+        optionC: ["2000"],
+        correctOption: ["optionA"]
+     },
+     { question:["Who directed Titanic, Avatar and The Terminator?"],
+        optionA: ["Steven Spielberg"],
+        optionB: ["Martin Scorsese"],
+        optionC: ["James Cameron"],
+        correctOption: ["optionC"]
+     },
+     { question: ["Which Oscar-winning actress is the voice of Helen Parr (Elastigirl) in The Incredibles?"],
+        optionA: ["Holly Hunter"],
+        optionB: ["Sarah Vowell"],
+        optionC: ["Elizabeth Peña"],
+        correctOption: ["optionA"]
+     },
+     { question: ["Which actor broke two toes whilst filming The Lord of the Rings: The Two Towers?"],
+        optionA: ["Sala Baker"],
+        optionB: ["Viggo Mortensen"],
+        optionC: ["Ian McKellen"],
+        correctOption: ["optionB"]
+     },
+     { question: ["What is the first word spoken in Star Wars: The Empire Strikes Back?"],
+        optionA: ["Echo"],
+        optionB: ["Jedi"],
+        optionC: ["Star"],
+        correctOption: ["optionA"]
+     },
+     { question: ["Who played the lead role in the 2001 film Lara Croft: Tomb Raider?"],
+        optionA: ["Jon Voight"],
+        optionB: ["Daniel Craig"],
+        optionC: ["Angelina Jolie"],
+        correctOption: ["optionC"]
+     },
+     { question:  ["How many Academy Awards has Leonardo DiCaprio won?"],
+        optionA: ["1"],
+        optionB: ["2"],
+        optionC: ["3"],
+        correctOption: ["optionA"]
+     },
+     { question:["What does Tom Hanks compare life to in Forest Gump?"],
+        optionA: ["Jenny"],
+        optionB: ["A box of chocolates"],
+        optionC: ["Shrimp boating"],
+        correctOption: ["optionB"]
+     }, 
+ 
+ ]
+
 let index = 0;
 let gameType = "Sports";
-let currentQuestions = sportsQuestion
 
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
-
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                alert("you clicked submit");
-            } else if (this.getAttribute("data-type") === "next-question") {
-                nextQuestion();                
-            } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(gameType);
-            } 
-        });
-        
-    }
-    runGame()
-});
 /**
  * The main game "loop", called when the script is loaded
  * and after the user's answer is processed 
@@ -94,9 +145,10 @@ document.addEventListener("DOMContentLoaded", function() {
 function runGame() {
     if(gameType === "Sports") {
         displaySportsQuestion();
-    }
-    else {
-        alert(`unkown game type ${gameType}`);
+    } else if(gameType === "Movies") {
+        displayMoviesQuestion();
+    } else {
+        alert("unkown game type");
     }
 
 }
@@ -119,17 +171,19 @@ function incrmentWrongAnswer() {
 
 function displaySportsQuestion() {
 
-   
-
-    document.getElementById("display-question").innerHTML = currentQuestions[index].question;
-    document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
-    document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
-    document.getElementById("option3").innerHTML = currentQuestions[index].optionC; 
+    document.getElementById("display-question").innerHTML = sportsQuestions[index].question;
+    document.getElementById("option1").innerHTML = sportsQuestions[index].optionA;
+    document.getElementById("option2").innerHTML = sportsQuestions[index].optionB;
+    document.getElementById("option3").innerHTML = sportsQuestions[index].optionC;
     
 }
 
 function displayMoviesQuestion() {
-
+    gameType = "Movies"
+    document.getElementById("display-question").innerHTML = moviesQuestions[index].question;
+    document.getElementById("option1").innerHTML = moviesQuestions[index].optionA;
+    document.getElementById("option2").innerHTML = moviesQuestions[index].optionB;
+    document.getElementById("option3").innerHTML = moviesQuestions[index].optionC;
 }
 
 function displayGeographyQuestion() {
@@ -137,7 +191,7 @@ function displayGeographyQuestion() {
 }
 
 function displayHisotryQuestion() {
-    gameType = "history";
+    gameType = "History";
     currentQuestions = historyQuestions;
     runGame();
 }

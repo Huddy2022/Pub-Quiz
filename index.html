@@ -17,10 +17,10 @@
     <h1 class="heading"> <i class="fa-solid fa-beer-mug-empty"></i> Pub Quiz </h1>
     <div class="game-area">
         <div class="controls-area">
-            <button data-type="Sports" class="btn btn--big btn--green"><i class="fa-solid fa-baseball-bat-ball"></i></button>
-            <button data-type="Movies" class="btn btn--big btn--blue"><i class="fa-solid fa-film"></i></button>
-            <button data-type="Geography" class="btn btn--big btn--purple"><i class="fa-solid fa-earth-americas"></i></button>
-            <button data-type="History" class="btn btn--big btn--red"><i class="fa-solid fa-landmark"></i></button>
+            <button onclick="displaySportsQuestion()" data-type="Sports" class="btn btn--big btn--green"><i class="fa-solid fa-baseball-bat-ball"></i></button>
+            <button onclick="displayMoviesQuestion()" data-type="Movies" class="btn btn--big btn--blue"><i class="fa-solid fa-film"></i></button>
+            <button onclick="displayGeographyQuestion()" data-type="Geography" class="btn btn--big btn--purple"><i class="fa-solid fa-earth-americas"></i></button>
+            <button onclick="displayHisotryQuestion()" data-type="History" class="btn btn--big btn--red"><i class="fa-solid fa-landmark"></i></button>
         </div>
         <div class="question-area">
             <h1 id="display-question"></h1>
@@ -35,7 +35,7 @@
             <button data-type="submit" class="submit">Submit Answer</button>
         </div>
         <div id="next-button">
-            <button data-type="next-question" class="next-question">Next Question</button>
+            <button onclick="nextQuestion()" data-type="next-question" class="next-question">Next Question</button>
         </div>
     </div> 
     </div>

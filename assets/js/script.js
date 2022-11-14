@@ -11,7 +11,7 @@ const sportsQuestions = [
       optionA: ["South Africa"],
       optionB: ["England"],
       optionC: ["Wales"],
-      correctOption: ["optionA"]
+      correctOption: ["South Africa"]
      },
      { question: ["How many F1 championships has Lewis Hamilton won?"],
        optionA: ["4"],
@@ -136,6 +136,7 @@ const moviesQuestions = [
  ]
 
 let index = 0;
+let currentQuestions = sportsQuestions;
 let gameType = "Sports";
 
 /**
@@ -144,16 +145,22 @@ let gameType = "Sports";
  */
 function runGame() {
     if(gameType === "Sports") {
-        displaySportsQuestion();
+        displayQuestion();
     } else if(gameType === "Movies") {
-        displayMoviesQuestion();
+        displayQuestion();
     } else {
         alert("unkown game type");
     }
 
 }
 
-function checkAnswer() {
+function checkAnswer(event) {
+   const currentQuestion = currentQuestions[index]
+   if (event.target.innerHTML === currentQuestion.correctOption) {
+
+   } else {
+
+   }
 
 }
 
@@ -169,16 +176,16 @@ function incrmentWrongAnswer() {
 
 }
 
-function displaySportsQuestion() {
+function displayQuestion() {
 
-    document.getElementById("display-question").innerHTML = sportsQuestions[index].question;
-    document.getElementById("option1").innerHTML = sportsQuestions[index].optionA;
-    document.getElementById("option2").innerHTML = sportsQuestions[index].optionB;
-    document.getElementById("option3").innerHTML = sportsQuestions[index].optionC;
+    document.getElementById("display-question").innerHTML = currentQuestions[index].question;
+    document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
+    document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
+    document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
     
 }
 
-function displayMoviesQuestion() {
+/* function displayMoviesQuestion() {
     gameType = "Movies"
     document.getElementById("display-question").innerHTML = moviesQuestions[index].question;
     document.getElementById("option1").innerHTML = moviesQuestions[index].optionA;
@@ -187,14 +194,16 @@ function displayMoviesQuestion() {
 }
 
 function displayGeographyQuestion() {
-
-}
-
-function displayHisotryQuestion() {
-    gameType = "History";
+   gameType = "Geography";
     currentQuestions = historyQuestions;
     runGame();
 }
+
+function displayHisotryQuestion() {
+   gameType = "History";
+   currentQuestions = historyQuestions;
+   runGame();
+} */
 
 function nextQuestion() {
     index++;

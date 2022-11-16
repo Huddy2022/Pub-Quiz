@@ -268,27 +268,31 @@ const moviesQuestions = [
 let index = 0;
 let currentQuestions = sportsQuestions;
 let gameType = "Sports";
-
 /**
  * The main game "loop", called when the script is loaded
  * and after the user's answer is processed 
  */
 function runGame() {
     if(gameType === "Sports") {
-        displayQuestion();
+        displaySportsQuestion();
     } else if(gameType === "Movies") {
-        displayQuestion();
+        displayMoviesQuestion();
+    } else if(gameType === "Geography") {
+        displayGeographyQuestion();
+    } else if(gameType === "History") {
+        displayHistoryQuestion();
     } else {
         alert("unkown game type");
     }
 
-}
+} 
 
 function checkAnswer(event) {
    const currentQuestion = currentQuestions[index]
    if (event.target.innerHTML === currentQuestion.correctOption) {
 
    } else {
+      alert("That was the wrong answer!");
 
    }
 
@@ -306,34 +310,44 @@ function incrmentWrongAnswer() {
 
 }
 
-function displayQuestion() {
+function displaySportsQuestion() {
 
     document.getElementById("display-question").innerHTML = currentQuestions[index].question;
     document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
     document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
     document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
-    
-}
-
-/* function displayMoviesQuestion() {
-    gameType = "Movies"
-    document.getElementById("display-question").innerHTML = moviesQuestions[index].question;
-    document.getElementById("option1").innerHTML = moviesQuestions[index].optionA;
-    document.getElementById("option2").innerHTML = moviesQuestions[index].optionB;
-    document.getElementById("option3").innerHTML = moviesQuestions[index].optionC;
-}
-
-function displayGeographyQuestion() {
-   gameType = "Geography";
-    currentQuestions = historyQuestions;
     runGame();
 }
 
-function displayHisotryQuestion() {
-   gameType = "History";
-   currentQuestions = historyQuestions;
-   runGame();
-} */
+function displayMoviesQuestion() {
+    gameType = "Movies"
+    currentQuestions = moviesQuestions;
+    document.getElementById("display-question").innerHTML = currentQuestions[index].question;
+    document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
+    document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
+    document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
+    runGame();
+}
+
+function displayGeographyQuestion() {
+    gameType = "Geography";
+    currentQuestions = geographyQuestions;
+    document.getElementById("display-question").innerHTML = currentQuestions[index].question;
+    document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
+    document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
+    document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
+    runGame();
+}
+
+function displayHistoryQuestion() {
+    gameType = "History";
+    currentQuestions = historyQuestions;
+    document.getElementById("display-question").innerHTML = currentQuestions[index].question;
+    document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
+    document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
+    document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
+    runGame();
+}
 
 function nextQuestion() {
     index++;

@@ -311,22 +311,21 @@ function incrmentWrongAnswer() {
 }
 
 function displaySportsQuestion() {
-
+    gameType = "Sports";
+    currentQuestions = sportsQuestions;
     document.getElementById("display-question").innerHTML = currentQuestions[index].question;
     document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
     document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
     document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
-    runGame();
 }
 
 function displayMoviesQuestion() {
-    gameType = "Movies"
+    gameType = "Movies";
     currentQuestions = moviesQuestions;
     document.getElementById("display-question").innerHTML = currentQuestions[index].question;
     document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
     document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
     document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
-    runGame();
 }
 
 function displayGeographyQuestion() {
@@ -336,7 +335,6 @@ function displayGeographyQuestion() {
     document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
     document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
     document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
-    runGame();
 }
 
 function displayHistoryQuestion() {
@@ -346,7 +344,6 @@ function displayHistoryQuestion() {
     document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
     document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
     document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
-    runGame();
 }
 
 function nextQuestion() {

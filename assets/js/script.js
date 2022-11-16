@@ -268,6 +268,8 @@ const moviesQuestions = [
 let index = 0;
 let currentQuestions = sportsQuestions;
 let gameType = "Sports";
+let questionNumber = 1
+let playerScore = 0  
 /**
  * The main game "loop", called when the script is loaded
  * and after the user's answer is processed 
@@ -288,7 +290,11 @@ function runGame() {
 } 
 
 function checkAnswer(event) {
+   document.getElementById("player-score")
+   const options = document.getElementsByClassName("option")
    const currentQuestion = currentQuestions[index]
+   const currentQuestionAnswer = currentQuestion.correctOption
+
    if (event.target.innerHTML === currentQuestion.correctOption) {
 
    } else {

@@ -294,9 +294,10 @@ function runGame() {
 function checkAnswer() {
    document.getElementById("player-score")
    const currentQuestion = currentQuestions[index]
+   let calculatedAnswer = selected();
    const currentQuestionAnswer = currentQuestion.correctOption
 
-   if (options === currentQuestionAnswer) {
+   if (currentQuestionAnswer = calculatedAnswer) {
       alert("that was the correct answer");
 
    } else {
@@ -360,7 +361,6 @@ function selected(elem) {
       }
       
       elem.style.backgroundColor = "green";
-  
 }  
 function nextQuestion() {
     index++;

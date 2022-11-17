@@ -268,8 +268,10 @@ const moviesQuestions = [
 let index = 0;
 let currentQuestions = sportsQuestions;
 let gameType = "Sports";
-let questionNumber = 1
-let playerScore = 0  
+let questionNumber = 1;
+let playerScore = 0;
+
+
 /**
  * The main game "loop", called when the script is loaded
  * and after the user's answer is processed 
@@ -289,19 +291,18 @@ function runGame() {
 
 } 
 
-function checkAnswer(event) {
+function checkAnswer() {
    document.getElementById("player-score")
-   const options = document.getElementsByClassName("option")
    const currentQuestion = currentQuestions[index]
    const currentQuestionAnswer = currentQuestion.correctOption
 
-   if (event.target.innerHTML === currentQuestion.correctOption) {
+   if (options === currentQuestionAnswer) {
+      alert("that was the correct answer");
 
    } else {
       alert("That was the wrong answer!");
 
    }
-
 }
 
 function calucalteCorrectAnswer() {
@@ -352,6 +353,15 @@ function displayHistoryQuestion() {
     document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
 }
 
+function selected(elem) {
+      let options = document.getElementsByClassName("option");
+      for (let i=0; i < options.length; i++) {
+          options[i].style.backgroundColor = "white";
+      }
+      
+      elem.style.backgroundColor = "green";
+  
+}  
 function nextQuestion() {
     index++;
     runGame();

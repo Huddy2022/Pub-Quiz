@@ -26,13 +26,13 @@
             <h1 id="display-question"></h1>
         </div> 
         <div class="options-area">
-            <span onclick="selected(this)" class="option" id="option1">0</span>
-            <span onclick="selected(this)" class="option" id="option2">0</span>
-            <span onclick="selected(this)" class="option" id="option3">0</span>
+            <span onclick="selected(this)" class="option" id="option1" class="chosen">0</span>
+            <span onclick="selected(this)" class="option" id="option2" class="chosen">0</span>
+            <span onclick="selected(this)" class="option" id="option3" class="chosen">0</span>
         </div> 
     <div id="button-container"> 
         <div id="submit-button">
-            <button data-type="submit" onclick="checkAnswer(event)" class="submit">Submit Answer</button>
+            <button data-type="submit" onclick="checkAnswer()" class="submit">Submit Answer</button>
         </div>
         <div id="next-button">
             <button onclick="nextQuestion()" data-type="next-question" class="next-question">Next Question</button>

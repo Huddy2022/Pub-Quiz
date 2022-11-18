@@ -270,8 +270,9 @@ let currentQuestions = sportsQuestions;
 let gameType = "Sports";
 let questionNumber = 1;
 let playerScore = 0;
-
-
+let options = document.getElementsByClassName("option");
+let chosen = document.getElementsByClassName("chosen");
+let score = document.getElementById("player-score");
 /**
  * The main game "loop", called when the script is loaded
  * and after the user's answer is processed 
@@ -292,12 +293,15 @@ function runGame() {
 } 
 
 function checkAnswer() {
-   document.getElementById("player-score")
-   const currentQuestion = currentQuestions[index]
-   let calculatedAnswer = selected();
-   const currentQuestionAnswer = currentQuestion.correctOption
+   
+   let currentQuestion = currentQuestions[index]
+   let calculatedAnswer = chosen;
+   let currentQuestionAnswer = currentQuestion.correctOption;
+   console.log(currentQuestionAnswer);
+   console.log(calculatedAnswer);
 
    if (currentQuestionAnswer = calculatedAnswer) {
+      
       alert("that was the correct answer");
 
    } else {
@@ -355,13 +359,18 @@ function displayHistoryQuestion() {
 }
 
 function selected(elem) {
-      let options = document.getElementsByClassName("option");
+   
       for (let i=0; i < options.length; i++) {
           options[i].style.backgroundColor = "white";
       }
-      
       elem.style.backgroundColor = "green";
+      if (elem.style.backgroundColor === "green"){
+          elem.classList.add("chosen");
+      } else {
+         return options.chosen;
+      }
 }  
+
 function nextQuestion() {
     index++;
     runGame();

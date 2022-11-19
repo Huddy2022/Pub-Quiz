@@ -133,6 +133,7 @@ body {
 }
 
 .btn--blue:active, 
+.btn--blue:focus,
 .btn--blue:hover {
     background-color: darkblue;
     color: white;
@@ -144,6 +145,7 @@ body {
 }
 
 .btn--green:active, 
+.btn--green:focus, 
 .btn--green:hover {
     background-color: darkgreen;
     color: white;
@@ -154,7 +156,8 @@ body {
     color: purple;
 }
 
-.btn--purple:active, 
+.btn--purple:active,
+.btn--purple:focus, 
 .btn--purple:hover {
     background-color: indigo;
     color: white;
@@ -166,6 +169,7 @@ body {
 }
 
 .btn--red:active, 
+.btn--red:focus,
 .btn--red:hover {
     background-color: darkred;
     color: white;

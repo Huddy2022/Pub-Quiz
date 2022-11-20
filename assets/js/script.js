@@ -349,12 +349,14 @@ let playerScore = 0;
 let options = document.getElementsByClassName("option");
 let chosen = document.getElementsByClassName("chosen");
 let score = document.getElementById("player-score");
+let gameStatus = "category selection"
 /**
 * The main game "loop", called when the script is loaded
 * and after the user's answer is processed 
 */
 function runGame() {
-   
+   disableAllButtons();
+   enableButtons();
    updateScore();
    updateQuestionNumber()
    if(gameType === "Sports") {
@@ -461,6 +463,7 @@ function nextQuestion() {
       alert('no more questions');
       index = 0;
       questionNumber = 1;
+      playerScore = 0;
    }
    runGame();
 }
@@ -470,4 +473,20 @@ function makeWhite() {
    document.getElementById("option1").style.backgroundColor = "white";
    document.getElementById("option2").style.backgroundColor = "white";
    document.getElementById("option3").style.backgroundColor = "white";
+}
+
+function disableAllButtons() {
+   const list = document.getElementsByClassName('game-button');
+   for (index = 0; index < list.length; ++index) {
+      list[index].setAttribute('disabled', true);
+      }
+}
+
+function enableButtons() {
+   const selection = document.getElementsByClassName("selected");
+   if (gameStatus === "category selection") {
+      for (index = 0; index < selection.length; ++index) {
+      selection[index].setAttribute('disabled', false);
+      }
+   }
 }

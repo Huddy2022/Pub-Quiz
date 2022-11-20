@@ -355,8 +355,8 @@ let gameStatus = "category selection"
 * and after the user's answer is processed 
 */
 function runGame() {
-   disableAllButtons();
-   enableButtons();
+   /*enableButtons();
+   disableAllButtons();*/
    updateScore();
    updateQuestionNumber()
    if(gameType === "Sports") {
@@ -387,7 +387,7 @@ function checkAnswer() {
    let currentQuestion = currentQuestions[index];
    let currentQuestionAnswer = currentQuestion.correctOption;
 
-/* check is the chosen option is correct */
+/* check the chosen option is correct */
 
    if (currentQuestionAnswer === calculatedAnswer) {
       
@@ -476,7 +476,7 @@ function makeWhite() {
 }
 
 function disableAllButtons() {
-   const list = document.getElementsByClassName('game-button');
+   const list = document.getElementsByClassName("game-button");
    for (index = 0; index < list.length; ++index) {
       list[index].setAttribute('disabled', true);
       }

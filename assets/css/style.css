@@ -62,6 +62,53 @@ body {
     margin: auto;
 }
 
+.container{
+    /*display: none;*/
+    position: fixed;
+    z-index: 1;
+    width: 1100px;
+    height: 650px;
+    top: 300px;
+} 
+.options-container{
+    height: 20rem;
+    width: 25rem;
+    background-color: black;
+    border: 5px solid darkred;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 25px;
+    margin: auto auto;
+}
+
+.button-container{
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-container button{
+    width: 10rem;
+    height: 2rem;
+    background-color: #d1d1d1;
+    border: 1px solid rgb(252, 242, 241);
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.button-container button:hover{
+    background-color: darkgray;
+    color: white;
+}
+
 .options-area {
     width: 75%;
     height: 150px;

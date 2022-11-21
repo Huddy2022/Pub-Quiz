@@ -388,8 +388,9 @@ function checkAnswer() {
    let currentQuestionAnswer = currentQuestion.correctOption;
 
 /* check the chosen option is correct */
-
-   if (currentQuestionAnswer === calculatedAnswer) {
+   if (calculatedAnswer === undefined) {
+   document.getElementById("options-container-modal").style.display ="flex";
+   } else if (currentQuestionAnswer === calculatedAnswer) {
       
       alert("that was the correct answer");
       playerScore++
@@ -454,7 +455,8 @@ function selected(elem) {
 }  
 
 function nextQuestion() {
-    
+   
+   calculatedAnswer = undefined;
    index++;
    updateQuestionNumber()
    questionNumber++;
@@ -489,4 +491,8 @@ function enableButtons() {
       selection[index].setAttribute('disabled', false);
       }
    }
+}
+
+function closeOptionsContainer() {
+   document.getElementById("options-container-modal").style.display = "none"
 }

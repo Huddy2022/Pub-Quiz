@@ -28,7 +28,7 @@ const sportsQuestions = [
       optionA: ["20"],
       optionB: ["22"],
       optionC: ["18"],
-      correctOption: "2"
+      correctOption: "22"
    },
 
    { 
@@ -350,6 +350,7 @@ let options = document.getElementsByClassName("option");
 let chosen = document.getElementsByClassName("chosen");
 let score = document.getElementById("player-score");
 let gameStatus = "category selection"
+
 /**
 * The main game "loop", called when the script is loaded
 * and after the user's answer is processed 
@@ -383,9 +384,10 @@ function updateQuestionNumber() {
 
 function checkAnswer() {
 
-   let calculatedAnswer = document.getElementsByClassName("options-area")[0].dataset.chosen;
+   
    let currentQuestion = currentQuestions[index];
    let currentQuestionAnswer = currentQuestion.correctOption;
+   let calculatedAnswer = document.getElementsByClassName("options-area")[0].dataset.chosen;
 
 /* check the chosen option is correct */
    if (calculatedAnswer === undefined) {
@@ -393,17 +395,36 @@ function checkAnswer() {
    } else if (currentQuestionAnswer === calculatedAnswer) {
       
       alert("that was the correct answer");
-      playerScore++
+      playerScore++;
       updateScore();
+      unSelect();
+      index++;
+      updateQuestionNumber()
+      questionNumber++;
+      makeWhite();
+      endGame();
 
    } else {
       alert("That was the wrong answer!");
+      unSelect();
+      index++;
+      updateQuestionNumber()
+      questionNumber++;
+      makeWhite();
+      endGame();
 
    }
 
    /* Current category of questions has finished*/
-   if (index >= currentQuestions.length - 1) {
+   /*if (index >= currentQuestions.length - 1) {
       alert('no more questions');
+   }*/
+   if (index >= currentQuestions.length - 0) {
+      alert('no more questions');
+      index = 0;
+      questionNumber = 1;
+      playerScore = 0;
+      runGame();
    }
 }
 
@@ -447,6 +468,20 @@ function displayHistoryQuestion() {
    document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
 }
 
+function endGame() {
+
+   if (index >= currentQuestions.length - 0) {
+      alert('no more questions');
+      index = 0;
+      questionNumber = 1;
+      playerScore = 0;
+      runGame();
+   } else {
+      runGame();
+   }
+
+}
+
 function selected(elem) {
    
    makeWhite();
@@ -454,13 +489,27 @@ function selected(elem) {
    document.getElementsByClassName("options-area")[0].dataset.chosen = elem.innerText;
 }  
 
+function unSelect() {
+
+   delete document.getElementsByClassName("options-area")[0].dataset.chosen;
+
+}
+
 function nextQuestion() {
    
-   calculatedAnswer = undefined;
-   index++;
-   updateQuestionNumber()
-   questionNumber++;
-   makeWhite();
+   if (calculatedAnswer === undefined) {
+
+      checkAnswer();
+
+   } else {
+      index++;
+      updateQuestionNumber()
+      questionNumber++;
+      makeWhite();
+
+   }
+      
+   
    if (index >= currentQuestions.length) {
       alert('no more questions');
       index = 0;
@@ -477,7 +526,7 @@ function makeWhite() {
    document.getElementById("option3").style.backgroundColor = "white";
 }
 
-function disableAllButtons() {
+/*function disableAllButtons() {
    const list = document.getElementsByClassName("game-button");
    for (index = 0; index < list.length; ++index) {
       list[index].setAttribute('disabled', true);
@@ -491,7 +540,7 @@ function enableButtons() {
       selection[index].setAttribute('disabled', false);
       }
    }
-}
+}*/
 
 function closeOptionsContainer() {
    document.getElementById("options-container-modal").style.display = "none"

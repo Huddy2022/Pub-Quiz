@@ -425,7 +425,13 @@ function checkAnswer() {
       questionNumber = 1;
       playerScore = 0;
       runGame();
-   }
+   } /*else if (gameType === "movies" || "Geography" || "History"){
+
+      index = 0;
+      questionNumber = 1;
+      playerScore = 0;
+      runGame();      
+   }*/
 }
 
 function displaySportsQuestion() {

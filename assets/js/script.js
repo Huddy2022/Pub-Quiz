@@ -2,9 +2,9 @@
 // Get the button elements and add event listeners to them
 document.addEventListener("DOMContentLoaded", function() {
    console.log("page has loaded")
-   runGame()
+   gameEntry();
 });
-/* four categories of of ten questions each */
+/* four categories of ten questions each */
 const sportsQuestions = [
 
    { 
@@ -351,23 +351,37 @@ let chosen = document.getElementsByClassName("chosen");
 let score = document.getElementById("player-score");
 let gameStatus = "category selection"
 
+function gameEntry() {
+
+   disableGameButtons();
+   document.getElementsByClassName("option")[0].style.display = "none";
+   document.getElementsByClassName("option")[1].style.display = "none";
+   document.getElementsByClassName("option")[2].style.display = "none";
+   document.getElementById("display-question").style.display = "none";
+   enableCategoryButtons();
+
+}
+
 /**
 * The main game "loop", called when the script is loaded
 * and after the user's answer is processed 
 */
 function runGame() {
-   /*enableButtons();
-   disableAllButtons();*/
+   
    updateScore();
-   updateQuestionNumber()
+   updateQuestionNumber();
    if(gameType === "Sports") {
       displaySportsQuestion();
+      disableCategoryButtons();
    } else if(gameType === "Movies") {
       displayMoviesQuestion();
+      disableCategoryButtons();
    } else if(gameType === "Geography") {
       displayGeographyQuestion();
+      disableCategoryButtons();
    } else if(gameType === "History") {
       displayHistoryQuestion();
+      disableCategoryButtons();
    } else {
       alert("unkown game type");
    }
@@ -442,6 +456,12 @@ function displaySportsQuestion() {
    document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
    document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
    document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
+   document.getElementsByClassName("option")[0].style.display = "block";
+   document.getElementsByClassName("option")[1].style.display = "block";
+   document.getElementsByClassName("option")[2].style.display = "block";
+   document.getElementById("display-question").style.display = "block";
+   enableGameButtons();
+   /*disableCategoryButtons();*/
 }
 
 function displayMoviesQuestion() {
@@ -452,6 +472,12 @@ function displayMoviesQuestion() {
    document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
    document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
    document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
+   document.getElementsByClassName("option")[0].style.display = "block";
+   document.getElementsByClassName("option")[1].style.display = "block";
+   document.getElementsByClassName("option")[2].style.display = "block";
+   document.getElementById("display-question").style.display = "block";
+   enableGameButtons();
+   /*disableCategoryButtons();*/
 }
 
 function displayGeographyQuestion() {
@@ -462,6 +488,12 @@ function displayGeographyQuestion() {
    document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
    document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
    document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
+   document.getElementsByClassName("option")[0].style.display = "block";
+   document.getElementsByClassName("option")[1].style.display = "block";
+   document.getElementsByClassName("option")[2].style.display = "block";
+   document.getElementById("display-question").style.display = "block";
+   enableGameButtons();
+   /*disableCategoryButtons();*/
 }
 
 function displayHistoryQuestion() {
@@ -472,6 +504,12 @@ function displayHistoryQuestion() {
    document.getElementById("option1").innerHTML = currentQuestions[index].optionA;
    document.getElementById("option2").innerHTML = currentQuestions[index].optionB;
    document.getElementById("option3").innerHTML = currentQuestions[index].optionC;
+   document.getElementsByClassName("option")[0].style.display = "block";
+   document.getElementsByClassName("option")[1].style.display = "block";
+   document.getElementsByClassName("option")[2].style.display = "block";
+   document.getElementById("display-question").style.display = "block";
+   enableGameButtons();
+   /*disableCategoryButtons();*/
 }
 
 function endGame() {
@@ -481,7 +519,7 @@ function endGame() {
       index = 0;
       questionNumber = 1;
       playerScore = 0;
-      runGame();
+      gameEntry();
    } else {
       runGame();
    }
@@ -532,21 +570,28 @@ function makeWhite() {
    document.getElementById("option3").style.backgroundColor = "white";
 }
 
-/*function disableAllButtons() {
-   const list = document.getElementsByClassName("game-button");
-   for (index = 0; index < list.length; ++index) {
-      list[index].setAttribute('disabled', true);
+function disableCategoryButtons() {
+   const category = document.getElementsByClassName("game-button");
+   for (i = 0; i < category.length; ++i) {
+      category[i].setAttribute('disabled', true);
       }
 }
 
-function enableButtons() {
-   const selection = document.getElementsByClassName("selected");
-   if (gameStatus === "category selection") {
-      for (index = 0; index < selection.length; ++index) {
-      selection[index].setAttribute('disabled', false);
+function disableGameButtons() {
+   document.querySelector('.submit').disabled = true;
+}
+
+function enableCategoryButtons() {
+   const category = document.getElementsByClassName("game-button");
+   for (i = 0; i < category.length; ++i) {
+      category[i].removeAttribute('disabled');
       }
-   }
-}*/
+
+}
+
+function enableGameButtons() {
+   document.querySelector('.submit').disabled = false;
+}
 
 function closeOptionsContainer() {
    document.getElementById("options-container-modal").style.display = "none"

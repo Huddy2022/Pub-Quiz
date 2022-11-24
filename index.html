@@ -45,6 +45,37 @@
                 </div>
             </div>
         </div>
+        <div class="container" id="incorrect-container-modal">
+            <div class="display-container">
+                <h1>That Was The Incorrect Answer!</h1>
+                <h1>The Correct Answer was <span id="answer"></span></h1>
+                <div class="emoji"><i class="fa-solid fa-face-frown"></i></div>
+                <div class="button-container">
+                    <button onclick="closeContainer()">Continue</button>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="end-game-container-modal">
+            <div class="display-container">
+                <h1>Congratulations Quiz Completed</h1>
+
+                <div class="grade-details">
+                    <p>Attempts : 10</p>
+
+                    <p>Wrong Answers : <span id="wrong-answers"></span></p>
+
+                    <p>Right Answers : <span id="right-answers"></span></p>
+
+                    <p>Grade : <span id="grade-percentage"></span>%</p>
+
+                    <p><spn id="remarks"></spn></p>
+
+                </div>
+                <div class="button-container">
+                    <button onclick="closeContainer()">Continue</button>
+                </div>
+            </div>
+        </div>
         <div class="options-area">
             <span onclick="selected(this)" class="option" id="option1" class="chosen">0</span>
             <span onclick="selected(this)" class="option" id="option2" class="chosen">0</span>

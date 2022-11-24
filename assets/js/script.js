@@ -346,6 +346,7 @@ let currentQuestions = sportsQuestions;
 let gameType = "Sports";
 let questionNumber = 1;
 let playerScore = 0;
+let wrongAttempt = 0;
 let options = document.getElementsByClassName("option");
 let chosen = document.getElementsByClassName("chosen");
 let score = document.getElementById("player-score");
@@ -362,6 +363,7 @@ function gameEntry() {
    enableCategoryButtons();
    updateScore();
    updateQuestionNumber();
+   wrongAttempt = 0;
 
 }
 
@@ -418,9 +420,13 @@ function checkAnswer() {
       endGame();
 
    } else {
-      alert("That was the wrong answer!");
+      
+      let answer = currentQuestionAnswer[0];
+      document.getElementById("answer").innerHTML = answer;
+      document.getElementById("incorrect-container-modal").style.display = "flex";
       unSelect();
       index++;
+      wrongAttempt++;
       updateQuestionNumber()
       questionNumber++;
       makeWhite();
@@ -432,13 +438,13 @@ function checkAnswer() {
    /*if (index >= currentQuestions.length - 1) {
       alert('no more questions');
    }*/
-   if (index >= currentQuestions.length - 0) {
+   /*if (index >= currentQuestions.length - 0) {
       alert('no more questions');
       index = 0;
       questionNumber = 1;
       playerScore = 0;
       runGame();
-   } /*else if (gameType === "movies" || "Geography" || "History"){
+   } else if (gameType === "movies" || "Geography" || "History"){
 
       index = 0;
       questionNumber = 1;
@@ -520,7 +526,7 @@ function displayHistoryQuestion() {
 function endGame() {
 
    if (index >= currentQuestions.length - 0) {
-      alert('no more questions');
+      endGameScore()
       index = 0;
       questionNumber = 1;
       playerScore = 0;
@@ -528,6 +534,33 @@ function endGame() {
    } else {
       runGame();
    }
+
+}
+
+function endGameScore() {
+   let remark = null;
+   let remarkColor = null;
+
+   if (playerScore <= 5) {
+      remark = "Bad score, keep practising"
+      remarkColor = "red";
+   } else if (playerScore >= 6 & playerScore <= 9) {
+      remark = "Well done, Great effort"
+      remarkColor = "orange"
+   } else if (playerScore = 10) {
+      remark = "Amazing you got them all right, try another category"
+      remarkColor = "green"
+   }
+
+   const playerGrade = (playerScore / 10) *100
+
+   document.getElementById("remarks").innerHTML = remark;
+   document.getElementById("remarks").style.color = remarkColor;
+   document.getElementById("grade-percentage").innerHTML = playerGrade;
+   document.getElementById("wrong-answers").innerHTML = wrongAttempt;
+   document.getElementById("right-answers").innerHTML = playerScore;
+   document.getElementById("end-game-container-modal").style.display = "flex";
+
 
 }
 
@@ -600,5 +633,7 @@ function enableGameButtons() {
 
 function closeContainer() {
    document.getElementById("options-container-modal").style.display = "none";
-   document.getElementById("correct-container-modal").style.display = "none"
+   document.getElementById("correct-container-modal").style.display = "none";
+   document.getElementById("incorrect-container-modal").style.display = "none";
+   document.getElementById("end-game-container-modal").style.display = "none";
 }

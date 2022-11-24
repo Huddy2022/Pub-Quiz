@@ -87,6 +87,11 @@ body {
 .display-container h1{
     text-align: center;
 }
+
+.display-container h2{
+    text-align: center;
+    font-size: 20px;
+}
 .emoji{
     font-size: 75px;
 }

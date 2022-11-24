@@ -421,7 +421,7 @@ function checkAnswer() {
 
    } else {
       
-      let answer = currentQuestionAnswer[0];
+      let answer = currentQuestionAnswer;
       document.getElementById("answer").innerHTML = answer;
       document.getElementById("incorrect-container-modal").style.display = "flex";
       unSelect();

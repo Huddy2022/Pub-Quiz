@@ -358,7 +358,10 @@ function gameEntry() {
    document.getElementsByClassName("option")[1].style.display = "none";
    document.getElementsByClassName("option")[2].style.display = "none";
    document.getElementById("display-question").style.display = "none";
+   document.getElementById("opening").style.visibility = "visible";
    enableCategoryButtons();
+   updateScore();
+   updateQuestionNumber();
 
 }
 
@@ -456,9 +459,10 @@ function displaySportsQuestion() {
    document.getElementsByClassName("option")[1].style.display = "block";
    document.getElementsByClassName("option")[2].style.display = "block";
    document.getElementById("display-question").style.display = "block";
-   document.getElementById("opening").style.display = "none";
+   document.getElementById("opening").style.visibility = "hidden";
    enableGameButtons();
    disableCategoryButtons();
+   document.getElementsByClassName("btn--green").style.backgroundColor = "darkgreen";
 }
 
 function displayMoviesQuestion() {
@@ -473,7 +477,7 @@ function displayMoviesQuestion() {
    document.getElementsByClassName("option")[1].style.display = "block";
    document.getElementsByClassName("option")[2].style.display = "block";
    document.getElementById("display-question").style.display = "block";
-   document.getElementById("opening").style.display = "none";
+   document.getElementById("opening").style.visibility = "hidden";
    enableGameButtons();
    disableCategoryButtons();
 }
@@ -490,9 +494,10 @@ function displayGeographyQuestion() {
    document.getElementsByClassName("option")[1].style.display = "block";
    document.getElementsByClassName("option")[2].style.display = "block";
    document.getElementById("display-question").style.display = "block";
-   document.getElementById("opening").style.display = "none";
+   document.getElementById("opening").style.visibility = "hidden";
    enableGameButtons();
    disableCategoryButtons();
+   
 }
 
 function displayHistoryQuestion() {
@@ -507,7 +512,7 @@ function displayHistoryQuestion() {
    document.getElementsByClassName("option")[1].style.display = "block";
    document.getElementsByClassName("option")[2].style.display = "block";
    document.getElementById("display-question").style.display = "block";
-   document.getElementById("opening").style.display = "none";
+   document.getElementById("opening").style.visibility = "hidden";
    enableGameButtons();
    disableCategoryButtons();
 }

@@ -233,13 +233,12 @@ body {
     position: relative;
 }
 
-#submit-button, #next-button {
-    float: left;
+#submit-button {
     margin: auto;
     text-align: center;
     width: 50%;
 }
-.submit, .next-question {
+.submit{
     border-radius: 25%;
     background-color: #fcf403;
     border: 1px transparent;
@@ -256,10 +255,6 @@ body {
     background-color: red
 }
 
-.next-question:active,
-.next-question:hover {
-    background-color: red
-}
 /* score area */
 
 .score-area {

@@ -372,16 +372,12 @@ function runGame() {
    updateQuestionNumber();
    if(gameType === "Sports") {
       displaySportsQuestion();
-      disableCategoryButtons();
    } else if(gameType === "Movies") {
       displayMoviesQuestion();
-      disableCategoryButtons();
    } else if(gameType === "Geography") {
       displayGeographyQuestion();
-      disableCategoryButtons();
    } else if(gameType === "History") {
       displayHistoryQuestion();
-      disableCategoryButtons();
    } else {
       alert("unkown game type");
    }
@@ -460,8 +456,9 @@ function displaySportsQuestion() {
    document.getElementsByClassName("option")[1].style.display = "block";
    document.getElementsByClassName("option")[2].style.display = "block";
    document.getElementById("display-question").style.display = "block";
+   document.getElementById("opening").style.display = "none";
    enableGameButtons();
-   /*disableCategoryButtons();*/
+   disableCategoryButtons();
 }
 
 function displayMoviesQuestion() {
@@ -476,8 +473,9 @@ function displayMoviesQuestion() {
    document.getElementsByClassName("option")[1].style.display = "block";
    document.getElementsByClassName("option")[2].style.display = "block";
    document.getElementById("display-question").style.display = "block";
+   document.getElementById("opening").style.display = "none";
    enableGameButtons();
-   /*disableCategoryButtons();*/
+   disableCategoryButtons();
 }
 
 function displayGeographyQuestion() {
@@ -492,8 +490,9 @@ function displayGeographyQuestion() {
    document.getElementsByClassName("option")[1].style.display = "block";
    document.getElementsByClassName("option")[2].style.display = "block";
    document.getElementById("display-question").style.display = "block";
+   document.getElementById("opening").style.display = "none";
    enableGameButtons();
-   /*disableCategoryButtons();*/
+   disableCategoryButtons();
 }
 
 function displayHistoryQuestion() {
@@ -508,8 +507,9 @@ function displayHistoryQuestion() {
    document.getElementsByClassName("option")[1].style.display = "block";
    document.getElementsByClassName("option")[2].style.display = "block";
    document.getElementById("display-question").style.display = "block";
+   document.getElementById("opening").style.display = "none";
    enableGameButtons();
-   /*disableCategoryButtons();*/
+   disableCategoryButtons();
 }
 
 function endGame() {

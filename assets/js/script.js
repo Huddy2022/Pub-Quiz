@@ -404,10 +404,10 @@ function checkAnswer() {
 
 /* check the chosen option is correct */
    if (calculatedAnswer === undefined) {
-   document.getElementById("options-container-modal").style.display ="flex";
+   document.getElementById("options-container-modal").style.display = "flex";
    } else if (currentQuestionAnswer === calculatedAnswer) {
       
-      alert("that was the correct answer");
+      document.getElementById("correct-container-modal").style.display = "flex";
       playerScore++;
       updateScore();
       unSelect();
@@ -598,6 +598,7 @@ function enableGameButtons() {
    document.querySelector('.submit').disabled = false;
 }
 
-function closeOptionsContainer() {
-   document.getElementById("options-container-modal").style.display = "none"
+function closeContainer() {
+   document.getElementById("options-container-modal").style.display = "none";
+   document.getElementById("correct-container-modal").style.display = "none"
 }

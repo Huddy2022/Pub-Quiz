@@ -70,7 +70,7 @@ body {
     top: 300px;
 } 
 
-.options-container{
+.display-container{
     height: 20rem;
     width: 25rem;
     background-color: black;
@@ -84,6 +84,12 @@ body {
     margin: auto auto;
 }
 
+.display-container h1{
+    text-align: center;
+}
+.emoji{
+    font-size: 75px;
+}
 .button-container{
     height: 2rem;
     width: 100%;

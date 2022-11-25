@@ -352,6 +352,7 @@ let chosen = document.getElementsByClassName("chosen");
 let score = document.getElementById("player-score");
 let gameStatus = "category selection"
 
+
 function gameEntry() {
 
    disableGameButtons();
@@ -404,7 +405,7 @@ function checkAnswer() {
    let currentQuestionAnswer = currentQuestion.correctOption;
    let calculatedAnswer = document.getElementsByClassName("options-area")[0].dataset.chosen;
 
-/* check the chosen option is correct */
+/* check the chosen option is correct or incorrect */
    if (calculatedAnswer === undefined) {
    document.getElementById("options-container-modal").style.display = "flex";
    } else if (currentQuestionAnswer === calculatedAnswer) {
@@ -433,24 +434,6 @@ function checkAnswer() {
       endGame();
 
    }
-
-   /* Current category of questions has finished*/
-   /*if (index >= currentQuestions.length - 1) {
-      alert('no more questions');
-   }*/
-   /*if (index >= currentQuestions.length - 0) {
-      alert('no more questions');
-      index = 0;
-      questionNumber = 1;
-      playerScore = 0;
-      runGame();
-   } else if (gameType === "movies" || "Geography" || "History"){
-
-      index = 0;
-      questionNumber = 1;
-      playerScore = 0;
-      runGame();      
-   }*/
 }
 
 function displaySportsQuestion() {
@@ -526,10 +509,11 @@ function displayHistoryQuestion() {
 function endGame() {
 
    if (index >= currentQuestions.length - 0) {
-      endGameScore()
+      /*setTimeout(endGameScore, 5000);*/
       index = 0;
       questionNumber = 1;
       playerScore = 0;
+      endGameScore();
       gameEntry();
    } else {
       runGame();

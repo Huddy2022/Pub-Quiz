@@ -418,7 +418,6 @@ function checkAnswer() {
       updateQuestionNumber()
       questionNumber++;
       makeWhite();
-      endGame();
 
    } else {
       
@@ -431,7 +430,6 @@ function checkAnswer() {
       updateQuestionNumber()
       questionNumber++;
       makeWhite();
-      endGame();
 
    }
 }
@@ -451,7 +449,7 @@ function displaySportsQuestion() {
    document.getElementById("opening").style.visibility = "hidden";
    enableGameButtons();
    disableCategoryButtons();
-   document.getElementsByClassName("btn--green").style.backgroundColor = "darkgreen";
+   /*document.getElementsByClassName("btn--green").style.backgroundColor = "darkgreen";*/
 }
 
 function displayMoviesQuestion() {
@@ -509,11 +507,13 @@ function displayHistoryQuestion() {
 function endGame() {
 
    if (index >= currentQuestions.length - 0) {
-      /*setTimeout(endGameScore, 5000);*/
+      
+      endGameScore();
       index = 0;
       questionNumber = 1;
       playerScore = 0;
-      endGameScore();
+      gameEntry();
+   } else if(index === 0){
       gameEntry();
    } else {
       runGame();
@@ -522,6 +522,7 @@ function endGame() {
 }
 
 function endGameScore() {
+   
    let remark = null;
    let remarkColor = null;
 
@@ -620,4 +621,5 @@ function closeContainer() {
    document.getElementById("correct-container-modal").style.display = "none";
    document.getElementById("incorrect-container-modal").style.display = "none";
    document.getElementById("end-game-container-modal").style.display = "none";
+   endGame();
 }

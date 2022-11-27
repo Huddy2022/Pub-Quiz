@@ -343,7 +343,7 @@ const historyQuestions = [
 
 let index = 0;
 let currentQuestions = sportsQuestions;
-let gameType = "Sports";
+let gameType = null;
 let questionNumber = 1;
 let playerScore = 0;
 let wrongAttempt = 0;
@@ -361,6 +361,7 @@ function gameEntry() {
    document.getElementsByClassName("option")[2].style.display = "none";
    document.getElementById("display-question").style.display = "none";
    document.getElementById("opening").style.visibility = "visible";
+   document.getElementById("type-category").style.visibility = "hidden";
    enableCategoryButtons();
    updateScore();
    updateQuestionNumber();
@@ -385,7 +386,7 @@ function runGame() {
    } else if(gameType === "History") {
       displayHistoryQuestion();
    } else {
-      alert("unkown game type");
+      gameEntry();
    }
 
 } 
@@ -418,7 +419,6 @@ function checkAnswer() {
       updateQuestionNumber()
       questionNumber++;
       makeWhite();
-      hover();
 
    } else {
       
@@ -431,7 +431,6 @@ function checkAnswer() {
       updateQuestionNumber()
       questionNumber++;
       makeWhite();
-      hover();
 
    }
 }
@@ -451,7 +450,10 @@ function displaySportsQuestion() {
    document.getElementById("opening").style.visibility = "hidden";
    enableGameButtons();
    disableCategoryButtons();
-   /*document.getElementsByClassName("btn--green").style.backgroundColor = "darkgreen";*/
+   document.getElementById("type-category").innerHTML = "SPORTS CATEGORY";
+   document.getElementById("type-category").style.color = "green";
+   document.getElementById("type-category").style.visibility = "visible";
+
 }
 
 function displayMoviesQuestion() {
@@ -469,6 +471,9 @@ function displayMoviesQuestion() {
    document.getElementById("opening").style.visibility = "hidden";
    enableGameButtons();
    disableCategoryButtons();
+   document.getElementById("type-category").innerHTML = "MOVIES CATEGORY";
+   document.getElementById("type-category").style.color = "blue";
+   document.getElementById("type-category").style.visibility = "visible";
 }
 
 function displayGeographyQuestion() {
@@ -486,6 +491,10 @@ function displayGeographyQuestion() {
    document.getElementById("opening").style.visibility = "hidden";
    enableGameButtons();
    disableCategoryButtons();
+   document.getElementById("type-category").innerHTML = "GEOGRAPHY CATEGORY";
+   document.getElementById("type-category").style.color = "purple";
+   document.getElementById("type-category").style.visibility = "visible";
+   
    
 }
 
@@ -504,6 +513,10 @@ function displayHistoryQuestion() {
    document.getElementById("opening").style.visibility = "hidden";
    enableGameButtons();
    disableCategoryButtons();
+   document.getElementById("type-category").innerHTML = "HISTORY CATEGORY";
+   document.getElementById("type-category").style.color = "red";
+   document.getElementById("type-category").style.visibility = "visible";
+
 }
 
 function endGame() {
@@ -514,8 +527,9 @@ function endGame() {
       index = 0;
       questionNumber = 1;
       playerScore = 0;
+      gameType = null;
       gameEntry();
-   } else if(index === 0){
+   } else if(index < 0){
       gameEntry();
    } else {
       runGame();
@@ -530,7 +544,7 @@ function endGameScore() {
 
    if (playerScore <= 5) {
       remark = "Bad score, keep practising"
-      remarkColor = "red";
+      remarkColor = "red"
    } else if (playerScore >= 6 & playerScore <= 9) {
       remark = "Well done, Great effort"
       remarkColor = "orange"

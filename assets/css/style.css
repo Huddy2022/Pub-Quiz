@@ -156,9 +156,9 @@ body {
     font-size: 30px;
 }
 
-#option1:hover, #option2:hover, #option3:hover {
+/*#option1:hover, #option2:hover, #option3:hover {
     background-color: green;
-}
+}*/
 /* Buttons */
 
 .btn {

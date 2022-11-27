@@ -418,6 +418,7 @@ function checkAnswer() {
       updateQuestionNumber()
       questionNumber++;
       makeWhite();
+      hover();
 
    } else {
       
@@ -430,6 +431,7 @@ function checkAnswer() {
       updateQuestionNumber()
       questionNumber++;
       makeWhite();
+      hover();
 
    }
 }
@@ -562,7 +564,7 @@ function unSelect() {
 
 }
 
-function nextQuestion() {
+/*function nextQuestion() {
    
    if (calculatedAnswer === undefined) {
 
@@ -584,7 +586,7 @@ function nextQuestion() {
       playerScore = 0;
    }
    runGame();
-}
+}*/
 
 function makeWhite() {
    
@@ -592,6 +594,33 @@ function makeWhite() {
    document.getElementById("option2").style.backgroundColor = "white";
    document.getElementById("option3").style.backgroundColor = "white";
 }
+
+/*function hover() {
+   
+   document.getElementById("option1").onmouseover = function(){mouseOver()};
+   document.getElementById("option2").onmouseover = function(){mouseOver()};
+   document.getElementById("option3").onmouseover = function(){mouseOver()};
+   document.getElementById("option1").onmouseout = function(){mouseOut()};
+   document.getElementById("option2").onmouseout = function(){mouseOut()};
+   document.getElementById("option3").onmouseout = function(){mouseOut()};
+   
+}
+
+function mouseOver() {
+
+   document.getElementById("option1").style.backgroundColor = "green";
+   document.getElementById("option2").style.backgroundColor = "green";
+   document.getElementById("option3").style.backgroundColor = "green";
+
+}
+
+function mouseOut() {
+
+   document.getElementById("option1").style.backgroundColor = "white";
+   document.getElementById("option2").style.backgroundColor = "white";
+   document.getElementById("option3").style.backgroundColor = "white";
+
+}*/
 
 function disableCategoryButtons() {
    const category = document.getElementsByClassName("game-button");

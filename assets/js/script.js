@@ -350,8 +350,6 @@ let wrongAttempt = 0;
 let options = document.getElementsByClassName("option");
 let chosen = document.getElementsByClassName("chosen");
 let score = document.getElementById("player-score");
-let gameStatus = "category selection"
-
 
 function gameEntry() {
 
@@ -401,8 +399,7 @@ function updateQuestionNumber() {
 
 function checkAnswer() {
 
-   
-   let currentQuestion = currentQuestions[index];
+    let currentQuestion = currentQuestions[index];
    let currentQuestionAnswer = currentQuestion.correctOption;
    let calculatedAnswer = document.getElementsByClassName("options-area")[0].dataset.chosen;
 
@@ -577,30 +574,6 @@ function unSelect() {
    delete document.getElementsByClassName("options-area")[0].dataset.chosen;
 
 }
-
-/*function nextQuestion() {
-   
-   if (calculatedAnswer === undefined) {
-
-      checkAnswer();
-
-   } else {
-      index++;
-      updateQuestionNumber()
-      questionNumber++;
-      makeWhite();
-
-   }
-      
-   
-   if (index >= currentQuestions.length) {
-      alert('no more questions');
-      index = 0;
-      questionNumber = 1;
-      playerScore = 0;
-   }
-   runGame();
-}*/
 
 function makeWhite() {
    

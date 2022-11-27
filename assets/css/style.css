@@ -288,3 +288,87 @@ body {
     display: inline-block;
     padding: 15px;
 }
+
+/* Media Quieries */
+
+@media (max-width: 1300px) {
+
+    #option1, #option2, #option3 {
+        width: 230px;
+    }
+        
+
+}
+
+@media (max-width: 1200px) {
+
+    #option1, #option2, #option3 {
+        width: 210px;
+    }
+        
+
+}
+
+@media (max-width: 1100px) {
+
+    #option1, #option2, #option3 {
+        width: 190px;
+        margin-top: 50px;
+    }
+
+    #display-question {
+        width: 75%;
+    }
+        
+
+}
+
+@media (max-width: 1000px) {
+
+    .question-area {
+        height: 60px;
+    }
+    #option1, #option2, #option3 {
+        width: 170px;
+    }
+    .btn--big {
+        width: 125px;
+        height: 125px;
+        font-size: 50px;
+    }
+    .controls-area {
+        margin-left: 30px;
+    }
+    .btn--big::after {
+        font-size: 20px;
+        left: -0.7rem;
+    }
+    .btn--red::after {
+        left: 1px;
+    }
+    .btn--blue::after {
+        left: 1px;
+    }
+    .btn--green::after {
+        left: 1px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    #option1, #option2, #option3 {
+        width: 150px;
+    }
+    .btn--big {
+        width: 115px;
+        height: 115px;
+        font-size: 40px;
+    }
+    .btn--big::after {
+        top: 10px;
+    }
+}
+
+@media (max-width: 850px) {
+    
+}

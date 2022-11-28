@@ -295,6 +295,18 @@ body {
 
     #option1, #option2, #option3 {
         width: 230px;
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+    .opening-container h1 {
+        font-size: 30px;
+    }
+    .display-container {
+        margin: 0;
+        position: relative;
+        left: 30%;
+        text-align: center;
     }
         
 
@@ -305,10 +317,26 @@ body {
     #option1, #option2, #option3 {
         width: 210px;
     }
-        
+    #display-question {
+        font-size: 15px;
+    }
+    .display-container {
+        height: 300px;
+        width: 350px;
+        left: 25%;
+        top: 30px;
+    } 
+    .display-container h1{
+        font-size: 20px;
+    }
+    .display-container h2{
+        font-size: 15px;
+    }
+    .emoji {
+        font-size: 50px;
+    }
 
 }
-
 @media (max-width: 1100px) {
 
     #option1, #option2, #option3 {
@@ -319,8 +347,14 @@ body {
     #display-question {
         width: 75%;
     }
-        
 
+    .opening-container h1 {
+        font-size: 25px;
+        padding-top: 5px;
+    }
+    .display-container {
+        left: 22%;
+    } 
 }
 
 @media (max-width: 1000px) {
@@ -352,6 +386,23 @@ body {
     .btn--green::after {
         left: 1px;
     }
+    #option1, #option2, #option3 {
+        font-size: 15px;
+        padding-top: 18px;
+    }
+    .opening-container h1 {
+        padding-top: 13px;
+    }
+    .display-container {
+        left: 20%;
+    }  
+}
+
+@media (max-width: 950px) {
+
+    .display-container {
+        left: 18%;
+    }
 }
 
 @media (max-width: 900px) {
@@ -367,8 +418,352 @@ body {
     .btn--big::after {
         top: 10px;
     }
+    .opening-container h1 {
+        font-size: 20px;
+    }
+    .display-container {
+        height: 250px;
+        width: 300px;
+        left: 18%;
+    }
+    .display-container h1 {
+        margin-bottom: 0px;
+    }
 }
 
 @media (max-width: 850px) {
+
+    .btn--big {
+        width: 100px;
+        height: 100px;
+        font-size: 30px;
+    }
+    .btn--big::after {
+        font-size: 15px;
+        top: 15px;
+    }
+    .submit {
+        width: 200px;
+        height: 50px;
+        font-size: 20px;
+    }
+    .game-area {
+        height: 600px;
+    }
     
+}
+@media (max-width: 800px) {
+    #option1, #option2, #option3 {
+        width: 125px;
+        left: 10%;
+    }
+}
+
+@media (max-width: 750px) {
+    .category-container h1 {
+        font-size: 30px;
+    }
+    .btn--big {
+        width: 85px;
+        height: 85px;
+    }
+    .btn--big::after {
+        top: 0;
+    }
+    .fa-landmark:before {
+        position: relative;
+        bottom: 10px;
+    }
+    .fa-film:before {
+        position: relative;
+        bottom: 10px;
+    }
+    .fa-baseball-bat-ball:before {
+        position: relative;
+        bottom: 10px;
+    }
+    .fa-earth-americas:before {
+        position: relative;
+        bottom: 10px;
+    }
+    #option1, #option2, #option3 {
+        left: 22px;
+    }
+    .display-container {
+        left: 150px;
+    }
+}
+@media (max-width: 700px) {
+    .opening-container h1 {
+        font-size: 15px;
+    }
+}
+@media (max-width: 685px) {
+    .btn--big {
+        width: 75px;
+        height: 75px;
+    }
+    .fa-landmark:before {
+        bottom: 15px;
+    }
+    .fa-film:before {
+        bottom: 15px;
+    }
+    .fa-baseball-bat-ball:before {
+        bottom: 15px;
+    }
+    .fa-earth-americas:before {
+        bottom: 15px;
+    }
+    #option3 {
+        margin-top: 80px;
+        position: absolute;
+        left: 40%
+    }
+    #option1 {
+        margin-top: 15px;
+        left: 50px;
+    }
+    #option2 {
+        margin-top: 15px;
+        left: 100px;
+    }
+    .display-container {
+        left: 110px;
+    }
+}
+
+@media (max-width: 630px) {
+    .game-area {
+        height: 650px;
+    }
+    .controls-area {
+        width: 400px;
+        margin: 10px, auto;
+        margin-left: 50px;
+    }
+    .btn--big {
+        margin: 10px 10px;
+    }
+    #display-question {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    #option2 {
+        left: 70px;
+    }
+    .display-container {
+        left: 90px;
+    }
+    .game-area {
+        height: 600px;
+    }
+}
+
+@media (max-width: 550px) {
+    .controls-area {
+        margin-left: 20px;
+    }
+    #option1 {
+        left: 25px;
+    }
+    #option2 {
+        left: 35px;
+    }
+    #option3 {
+        left: 190px;
+    }
+    .display-container {
+        left: 65px;
+    }
+   
+}
+@media (max-width: 500px) {
+    .controls-area {
+        font-size: 2px;
+        display: block;
+        column-count: 2;
+        position: relative;
+        left: 80px;
+        margin-top: 20px;
+    }
+    .category-container h1 {
+        font-size: 25px;
+    }
+    .btn--big::after {
+        top: -10px;
+    }
+    .question-area {
+        margin-top: 5px;
+    }
+    .game-area {
+        height: 720px;
+    }
+    .options-area {
+        height: 250px;
+    }
+    #option1 {
+        left: 89px;
+    }
+    #option2 {
+        position: absolute;
+        left: 180px;
+        top: 630px;
+    }
+    #option3 {
+        left: 180px;
+        top: 650px;
+    }
+    .display-container {
+        left: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    .controls-area {
+        left: 60px;
+    }
+    #option1 {
+        left: 65px;
+    }
+    #option2 {
+        left: 150px;
+    }
+    #option3 {
+        left: 150px;
+    }
+    .submit {
+        position: relative;
+        right: 20px;
+    }
+    .display-container {
+        left: 20px;
+    }
+}
+@media (max-width: 400px) {
+    .display-container {
+        position: relative;
+    left: 60px;
+    width: 170px;
+    height: 220px;
+    }
+    .display-container h1{
+        font-size: 15px;
+    }
+    .display-container h2{
+        font-size: 10px;
+    }
+    .emoji {
+        font-size: 35px;
+    }
+    .button-container button {
+        width: 7rem;
+    }
+    .display-container p {
+        font-size: 12px;
+    }
+    .controls-area {
+        left: 40px;
+    }
+    #option1 {
+        left: 50px;
+    }
+    #option2 {
+        left: 124px;
+    }
+    #option3 {
+        left: 124px;
+    }
+    .submit {
+        right: 35px;
+    }
+    .score-area {
+        font-size: 17px;
+    }
+
+}
+@media (max-width: 375px) {
+    .heading {
+        font-size: 3rem;
+    }
+    .controls-area {
+        width: 100%;
+        left: 0;
+        margin-top: 25px;
+    }
+    .category-container h1 {
+        font-size: 20px;
+    }
+    .btn--big::after {
+        top: 0;
+        position: relative;
+        top: -10px;
+    }
+    #display-question {
+        font-size: 10px;
+    }
+    .options-area {
+        height: 220px;
+    }
+    .question-area {
+        margin-top: 10px;
+    }
+    #option1 {
+        margin-top: 5px;
+    }
+    #option2 {
+        margin-top: 10px;
+        top: 575px;
+    }
+    #option3 {
+        margin-top: 60px;
+        top: 595px;
+    }
+    .game-area {
+        height: 670px;
+    }
+    .submit {
+        position: relative;
+        width: 100px;
+        height: 30px;
+        font-size: 10px;
+        left: 0px;
+    }
+    .score-area {
+        font-size: 18px;
+    }
+    .display-container {
+        position: relative;
+    left: 40px;;
+    width: 170px;
+    height: 220px;
+    }
+    .display-container h1{
+        font-size: 15px;
+    }
+    .display-container h2{
+        font-size: 10px;
+    }
+    .emoji {
+        font-size: 35px;
+    }
+    .button-container button {
+        width: 7rem;
+    }
+    .display-container p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 320px) {
+    #option1 {
+        left: 35px
+    }
+    #option2 {
+        left: 99px;
+    }
+    #option3 {
+        left: 99px;
+    }
 }

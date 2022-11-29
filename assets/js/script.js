@@ -341,9 +341,9 @@ function updateQuestionNumber() {
 }
 /* check the users answer equals the correct option in the array of questions*/
 function checkAnswer() {
-   let currentQuestion = currentQuestions[index];
-   let currentQuestionAnswer = currentQuestion.correctOption;
-   let calculatedAnswer = document.getElementsByClassName("options-area")[0].dataset.chosen;
+   const currentQuestion = currentQuestions[index];
+   const currentQuestionAnswer = currentQuestion.correctOption;
+   const calculatedAnswer = document.getElementsByClassName("options-area")[0].dataset.chosen;
    /* check the chosen option is correct or incorrect (display container) then update the score, question number, re set the options*/
    if (calculatedAnswer === undefined) {
       document.getElementById("options-container-modal").style.display = "flex";
@@ -357,7 +357,7 @@ function checkAnswer() {
       questionNumber++;
       makeWhite();
    } else {
-      let answer = currentQuestionAnswer;
+      const answer = currentQuestionAnswer;
       document.getElementById("answer").innerHTML = answer;
       document.getElementById("incorrect-container-modal").style.display = "flex";
       unSelect();

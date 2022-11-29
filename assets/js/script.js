@@ -385,7 +385,7 @@ function displaySportsQuestion() {
    disableCategoryButtons();
    /*display category type*/
    document.getElementById("type-category").innerHTML = "SPORTS CATEGORY";
-   document.getElementById("type-category").style.color = "green";
+   document.getElementById("type-category").style.color = "black";
    document.getElementById("type-category").style.visibility = "visible";
 }
 /* display current movies question, enable game buttons for user*/
@@ -405,7 +405,7 @@ function displayMoviesQuestion() {
    disableCategoryButtons();
    /*display category type*/
    document.getElementById("type-category").innerHTML = "MOVIES CATEGORY";
-   document.getElementById("type-category").style.color = "blue";
+   document.getElementById("type-category").style.color = "black";
    document.getElementById("type-category").style.visibility = "visible";
 }
 /* display current geography question, enable game buttons for user*/
@@ -425,7 +425,7 @@ function displayGeographyQuestion() {
    disableCategoryButtons();
    /*display category type*/
    document.getElementById("type-category").innerHTML = "GEOGRAPHY CATEGORY";
-   document.getElementById("type-category").style.color = "purple";
+   document.getElementById("type-category").style.color = "black";
    document.getElementById("type-category").style.visibility = "visible";
 }
 /* display current history question, enable game buttons for user*/
@@ -445,7 +445,7 @@ function displayHistoryQuestion() {
    disableCategoryButtons();
    /*display category type*/
    document.getElementById("type-category").innerHTML = "HISTORY CATEGORY";
-   document.getElementById("type-category").style.color = "red";
+   document.getElementById("type-category").style.color = "black";
    document.getElementById("type-category").style.visibility = "visible";
 }
 /* a function to end the game once all ten questions have finished and display end game container, else run game or reset game*/

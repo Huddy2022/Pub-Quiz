@@ -58,7 +58,7 @@ body {
     margin: auto;
 }
 
-.category-container span{
+.category-container span {
     font-size: 35px;
     text-align: center;
     position: absolute;
@@ -721,7 +721,7 @@ body {
     }
 
     #option3 {
-        left: 150px;    
+        left: 150px;
     }
 
     .submit {
@@ -732,18 +732,22 @@ body {
     .display-container {
         left: 20px;
     }
+
     .score-area {
         font-size: 17px;
     }
 }
+
 @media (max-width: 420px) {
     #option2 {
         left: 144px;
     }
+
     #option3 {
         left: 144px;
     }
 }
+
 @media (max-width: 400px) {
     .display-container {
         position: relative;
@@ -885,6 +889,7 @@ body {
         font-size: 12px;
     }
 }
+
 @media (max-width: 350px) {
     #option1 {
         left: 45px
@@ -912,10 +917,12 @@ body {
         left: 99px;
     }
 }
+
 @media (max-width: 280px) {
     .controls-area {
         left: -10px;
     }
+
     #option1 {
         left: 20px
     }

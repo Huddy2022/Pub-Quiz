@@ -1,5 +1,4 @@
 /* global style */
-
 body {
     font-family: karla, sans-serif;
     font-weight: bold;
@@ -8,7 +7,6 @@ body {
 }
 
 /* heading */
-
 .heading {
     text-align: center;
     font-size: 4rem;
@@ -16,7 +14,6 @@ body {
 }
 
 /* Game area */
-
 .game-area {
     background-color: #A7A5A5;
     box-sizing: border-box;
@@ -34,7 +31,6 @@ body {
     width: 825px;
     margin: 30px auto;
     margin-top: 50px;
-
 }
 
 .question-area {
@@ -62,24 +58,24 @@ body {
     margin: auto;
 }
 
-.category-container h1{
-        font-size: 35px;
-        text-align: center; 
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;      
+.category-container h1 {
+    font-size: 35px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
 
-.container{
+.container {
     display: none;
     position: fixed;
     z-index: 1;
     width: 1100px;
     top: 300px;
-} 
+}
 
-.display-container{
+.display-container {
     height: 20rem;
     width: 25rem;
     background-color: black;
@@ -93,18 +89,24 @@ body {
     margin: auto auto;
 }
 
-.display-container h1{
+.display-container h1 {
     text-align: center;
 }
 
-.display-container h2{
+.display-container h2 {
     text-align: center;
     font-size: 20px;
 }
-.emoji{
+
+.grade-details {
+    text-align: center;
+}
+
+.emoji {
     font-size: 75px;
 }
-.button-container{
+
+.button-container {
     height: 2rem;
     width: 100%;
     display: flex;
@@ -112,7 +114,7 @@ body {
     justify-content: center;
 }
 
-.button-container button{
+.button-container button {
     width: 10rem;
     height: 2rem;
     background-color: #d1d1d1;
@@ -124,7 +126,7 @@ body {
     border-radius: 20px;
 }
 
-.button-container button:hover{
+.button-container button:hover {
     background-color: darkgray;
     color: white;
 }
@@ -133,7 +135,7 @@ body {
     color: black;
     font-size: 35px;
     margin-top: 65px;
-    text-align: center;   
+    text-align: center;
 }
 
 .options-area {
@@ -150,7 +152,9 @@ body {
     align-items: center;
 }
 
-#option1, #option2, #option3 {
+#option1,
+#option2,
+#option3 {
     display: block;
     background-color: white;
     width: 250px;
@@ -166,11 +170,7 @@ body {
     padding-top: 5px;
 }
 
-/*#option1:hover, #option2:hover, #option3:hover {
-    background-color: green;
-}*/
 /* Buttons */
-
 .btn {
     height: 200px;
     width: 300px;
@@ -197,17 +197,19 @@ body {
     padding-top: 10%;
     color: black;
 }
+
 .btn--purple::after {
     content: attr(data-type);
     position: relative;
     right: 15px;
 }
+
 .btn--blue {
     border-color: blue;
     color: blue;
 }
 
-.btn--blue:active, 
+.btn--blue:active,
 .btn--blue:focus,
 .btn--blue:hover {
     background-color: darkblue;
@@ -219,8 +221,8 @@ body {
     color: green;
 }
 
-.btn--green:active, 
-.btn--green:focus, 
+.btn--green:active,
+.btn--green:focus,
 .btn--green:hover {
     background-color: darkgreen;
     color: white;
@@ -232,7 +234,7 @@ body {
 }
 
 .btn--purple:active,
-.btn--purple:focus, 
+.btn--purple:focus,
 .btn--purple:hover {
     background-color: indigo;
     color: white;
@@ -243,7 +245,7 @@ body {
     color: red;
 }
 
-.btn--red:active, 
+.btn--red:active,
 .btn--red:focus,
 .btn--red:hover {
     background-color: darkred;
@@ -259,7 +261,8 @@ body {
     text-align: center;
     width: 50%;
 }
-.submit{
+
+.submit {
     border-radius: 25%;
     background-color: #fcf403;
     border: 1px transparent;
@@ -271,6 +274,7 @@ body {
     font-size: 25px;
     border: 2px solid black;
 }
+
 .submit:active,
 .submit:hover {
     background-color: red
@@ -293,7 +297,9 @@ body {
 
 @media (max-width: 1300px) {
 
-    #option1, #option2, #option3 {
+    #option1,
+    #option2,
+    #option3 {
         width: 230px;
         font-size: 20px;
         padding-top: 10px;
@@ -302,44 +308,55 @@ body {
     .opening-container h1 {
         font-size: 30px;
     }
+
     .display-container {
         margin: 0;
         position: relative;
         left: 30%;
         text-align: center;
     }
-        
+
 
 }
 
 @media (max-width: 1200px) {
 
-    #option1, #option2, #option3 {
+    #option1,
+    #option2,
+    #option3 {
         width: 210px;
     }
+
     #display-question {
         font-size: 15px;
     }
+
     .display-container {
         height: 300px;
         width: 350px;
         left: 25%;
         top: 30px;
-    } 
-    .display-container h1{
+    }
+
+    .display-container h1 {
         font-size: 20px;
     }
-    .display-container h2{
+
+    .display-container h2 {
         font-size: 15px;
     }
+
     .emoji {
         font-size: 50px;
     }
 
 }
+
 @media (max-width: 1100px) {
 
-    #option1, #option2, #option3 {
+    #option1,
+    #option2,
+    #option3 {
         width: 190px;
         margin-top: 50px;
     }
@@ -352,9 +369,10 @@ body {
         font-size: 25px;
         padding-top: 5px;
     }
+
     .display-container {
         left: 22%;
-    } 
+    }
 }
 
 @media (max-width: 1000px) {
@@ -362,40 +380,54 @@ body {
     .question-area {
         height: 60px;
     }
-    #option1, #option2, #option3 {
+
+    #option1,
+    #option2,
+    #option3 {
         width: 170px;
     }
+
     .btn--big {
         width: 125px;
         height: 125px;
         font-size: 50px;
     }
+
     .controls-area {
         margin-left: 30px;
     }
+
     .btn--big::after {
         font-size: 20px;
         left: -0.7rem;
     }
+
     .btn--red::after {
         left: 1px;
     }
+
     .btn--blue::after {
         left: 1px;
     }
+
     .btn--green::after {
         left: 1px;
     }
-    #option1, #option2, #option3 {
+
+    #option1,
+    #option2,
+    #option3 {
         font-size: 15px;
         padding-top: 18px;
     }
+
     .opening-container h1 {
         padding-top: 13px;
     }
+
     .display-container {
         left: 20%;
-    }  
+    }
 }
 
 @media (max-width: 950px) {
@@ -407,25 +439,32 @@ body {
 
 @media (max-width: 900px) {
 
-    #option1, #option2, #option3 {
+    #option1,
+    #option2,
+    #option3 {
         width: 150px;
     }
+
     .btn--big {
         width: 115px;
         height: 115px;
         font-size: 40px;
     }
+
     .btn--big::after {
         top: 10px;
     }
+
     .opening-container h1 {
         font-size: 20px;
     }
+
     .display-container {
         height: 250px;
         width: 300px;
         left: 18%;
     }
+
     .display-container h1 {
         margin-bottom: 0px;
     }
@@ -438,22 +477,29 @@ body {
         height: 100px;
         font-size: 30px;
     }
+
     .btn--big::after {
         font-size: 15px;
         top: 15px;
     }
+
     .submit {
         width: 200px;
         height: 50px;
         font-size: 20px;
     }
+
     .game-area {
         height: 600px;
     }
-    
+
 }
+
 @media (max-width: 800px) {
-    #option1, #option2, #option3 {
+
+    #option1,
+    #option2,
+    #option3 {
         width: 125px;
         left: 10%;
     }
@@ -463,71 +509,91 @@ body {
     .category-container h1 {
         font-size: 30px;
     }
+
     .btn--big {
         width: 85px;
         height: 85px;
     }
+
     .btn--big::after {
         top: 0;
     }
+
     .fa-landmark:before {
         position: relative;
         bottom: 10px;
     }
+
     .fa-film:before {
         position: relative;
         bottom: 10px;
     }
+
     .fa-baseball-bat-ball:before {
         position: relative;
         bottom: 10px;
     }
+
     .fa-earth-americas:before {
         position: relative;
         bottom: 10px;
     }
-    #option1, #option2, #option3 {
+
+    #option1,
+    #option2,
+    #option3 {
         left: 22px;
     }
+
     .display-container {
         left: 150px;
     }
 }
+
 @media (max-width: 700px) {
     .opening-container h1 {
         font-size: 15px;
     }
 }
+
 @media (max-width: 685px) {
     .btn--big {
         width: 75px;
         height: 75px;
     }
+
     .fa-landmark:before {
         bottom: 15px;
     }
+
     .fa-film:before {
         bottom: 15px;
     }
+
     .fa-baseball-bat-ball:before {
         bottom: 15px;
     }
+
     .fa-earth-americas:before {
         bottom: 15px;
     }
+
     #option3 {
         margin-top: 80px;
         position: absolute;
         left: 40%
     }
+
     #option1 {
         margin-top: 15px;
         left: 50px;
     }
+
     #option2 {
         margin-top: 15px;
         left: 100px;
     }
+
     .display-container {
         left: 110px;
     }
@@ -537,14 +603,17 @@ body {
     .game-area {
         height: 650px;
     }
+
     .controls-area {
         width: 400px;
         margin: 10px, auto;
         margin-left: 50px;
     }
+
     .btn--big {
         margin: 10px 10px;
     }
+
     #display-question {
         font-size: 12px;
     }
@@ -554,9 +623,11 @@ body {
     #option2 {
         left: 70px;
     }
+
     .display-container {
         left: 90px;
     }
+
     .game-area {
         height: 600px;
     }
@@ -566,20 +637,25 @@ body {
     .controls-area {
         margin-left: 20px;
     }
+
     #option1 {
         left: 25px;
     }
+
     #option2 {
         left: 35px;
     }
+
     #option3 {
         left: 190px;
     }
+
     .display-container {
         left: 65px;
     }
-   
+
 }
+
 @media (max-width: 500px) {
     .controls-area {
         font-size: 2px;
@@ -589,33 +665,42 @@ body {
         left: 80px;
         margin-top: 20px;
     }
+
     .category-container h1 {
         font-size: 25px;
     }
+
     .btn--big::after {
         top: -10px;
     }
+
     .question-area {
         margin-top: 5px;
     }
+
     .game-area {
         height: 720px;
     }
+
     .options-area {
         height: 250px;
     }
+
     #option1 {
         left: 89px;
     }
+
     #option2 {
         position: absolute;
         left: 180px;
         top: 630px;
     }
+
     #option3 {
         left: 180px;
         top: 650px;
     }
+
     .display-container {
         left: 40px;
     }
@@ -625,105 +710,134 @@ body {
     .controls-area {
         left: 60px;
     }
+
     #option1 {
         left: 65px;
     }
+
     #option2 {
         left: 150px;
     }
+
     #option3 {
         left: 150px;
     }
+
     .submit {
         position: relative;
         right: 20px;
     }
+
     .display-container {
         left: 20px;
     }
 }
+
 @media (max-width: 400px) {
     .display-container {
         position: relative;
-    left: 60px;
-    width: 170px;
-    height: 220px;
+        left: 60px;
+        width: 170px;
+        height: 220px;
     }
-    .display-container h1{
+
+    .display-container h1 {
         font-size: 15px;
     }
-    .display-container h2{
+
+    .display-container h2 {
         font-size: 10px;
     }
+
     .emoji {
         font-size: 35px;
     }
+
     .button-container button {
         width: 7rem;
     }
+
     .display-container p {
         font-size: 12px;
     }
+
     .controls-area {
         left: 40px;
     }
+
     #option1 {
         left: 50px;
     }
+
     #option2 {
         left: 124px;
     }
+
     #option3 {
         left: 124px;
     }
+
     .submit {
         right: 35px;
     }
+
     .score-area {
         font-size: 17px;
     }
 
 }
+
 @media (max-width: 375px) {
     .heading {
         font-size: 3rem;
     }
+
     .controls-area {
         width: 100%;
         left: 0;
         margin-top: 25px;
     }
+
     .category-container h1 {
         font-size: 20px;
     }
+
     .btn--big::after {
         top: 0;
         position: relative;
         top: -10px;
     }
+
     #display-question {
         font-size: 10px;
     }
+
     .options-area {
         height: 220px;
     }
+
     .question-area {
         margin-top: 10px;
     }
+
     #option1 {
         margin-top: 5px;
     }
+
     #option2 {
         margin-top: 10px;
         top: 575px;
     }
+
     #option3 {
         margin-top: 60px;
         top: 595px;
     }
+
     .game-area {
         height: 670px;
     }
+
     .submit {
         position: relative;
         width: 100px;
@@ -731,38 +845,49 @@ body {
         font-size: 10px;
         left: 0px;
     }
+
     .score-area {
         font-size: 18px;
     }
+
     .display-container {
         position: relative;
-    left: 40px;;
-    width: 170px;
-    height: 220px;
+        left: 40px;
+        ;
+        width: 170px;
+        height: 220px;
     }
-    .display-container h1{
+
+    .display-container h1 {
         font-size: 15px;
     }
-    .display-container h2{
+
+    .display-container h2 {
         font-size: 10px;
     }
+
     .emoji {
         font-size: 35px;
     }
+
     .button-container button {
         width: 7rem;
     }
+
     .display-container p {
         font-size: 12px;
     }
 }
+
 @media (max-width: 320px) {
     #option1 {
         left: 35px
     }
+
     #option2 {
         left: 99px;
     }
+
     #option3 {
         left: 99px;
     }

@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Merriweather:wght@300&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/62b6c595da.js" crossorigin="anonymous"></script>
-    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
     <title>Pub Quiz!</title>
 </head>
 
@@ -21,26 +21,24 @@
     <h1 class="heading"> <i class="fa-solid fa-beer-mug-empty"></i> Pub Quiz </h1>
     <div class="game-area">
         <div class="category-container" id="category">
-            <h1><span id="type-category"></span></h1>
+            <span id="type-category"></span>
         </div>
         <!--Body - category area-->
         <div class="controls-area">
             <button onclick="displaySportsQuestion()" data-type="Sports" aria-label="sports category"
-                class="btn btn--big btn--green game-button selected" class="active"><i
+                class="btn btn--big btn--green game-button selected active"><i
                     class="fa-solid fa-baseball-bat-ball"></i></button>
             <button onclick="displayMoviesQuestion()" data-type="Movies" aria-label="movies category"
-                class="btn btn--big btn--blue game-button selected" class="active"><i
-                    class="fa-solid fa-film"></i></button>
+                class="btn btn--big btn--blue game-button selected active"><i class="fa-solid fa-film"></i></button>
             <button onclick="displayGeographyQuestion()" data-type="Geography" aria-label="geography category"
-                class="btn btn--big btn--purple game-button selected" class="active"><i
+                class="btn btn--big btn--purple game-button selected active"><i
                     class="fa-solid fa-earth-americas"></i></button>
             <button onclick="displayHistoryQuestion()" data-type="History" aria-label="history category"
-                class="btn btn--big btn--red game-button selected" class="active"><i
-                    class="fa-solid fa-landmark"></i></button>
+                class="btn btn--big btn--red game-button selected active"><i class="fa-solid fa-landmark"></i></button>
         </div>
         <!--display question-->
         <div class="question-area">
-            <h1 id="display-question"></h1>
+            <span id="display-question"></span>
             <div class="opening-container" id="opening">
                 <h1>Please Select A Category To Start The Game!</h1>
             </div>
@@ -87,7 +85,7 @@
                     <p>Grade : <span id="grade-percentage"></span>%</p>
 
                     <p>
-                        <spn id="remarks"></spn>
+                        <span id="remarks"></span>
                     </p>
 
                 </div>
@@ -98,9 +96,9 @@
         </div>
         <!--selectable options for user-->
         <div class="options-area">
-            <span onclick="selected(this)" class="option" id="option1" class="chosen">0</span>
-            <span onclick="selected(this)" class="option" id="option2" class="chosen">0</span>
-            <span onclick="selected(this)" class="option" id="option3" class="chosen">0</span>
+            <span onclick="selected(this)" class="option chosen" id="option1">0</span>
+            <span onclick="selected(this)" class="option chosen" id="option2">0</span>
+            <span onclick="selected(this)" class="option chosen" id="option3">0</span>
         </div>
         <!--submit button-->
         <div id="button-container">

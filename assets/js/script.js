@@ -291,7 +291,7 @@ const historyQuestions = [{
       correctOption: "Saint Anne"
    },
 ];
-/* variables to link in with the game functions*/
+/* variables to link in with the game functions and get redeclared*/
 let index = 0;
 let currentQuestions = sportsQuestions;
 let gameType = null;

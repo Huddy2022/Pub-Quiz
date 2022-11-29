@@ -731,6 +731,9 @@ body {
     .display-container {
         left: 20px;
     }
+    .score-area {
+        font-size: 17px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -779,10 +782,6 @@ body {
 
     .submit {
         right: 35px;
-    }
-
-    .score-area {
-        font-size: 17px;
     }
 
 }

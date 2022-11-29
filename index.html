@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +9,43 @@
     <meta name="description" content="pub quiz, on fun categories, sport, movies, geography, and history">
     <meta name="keywords" content="pub quiz, sport, movies, geography, history">
     <!--Google Fonts,fontawesome and favicon-->
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Merriweather:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Merriweather:wght@300&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/62b6c595da.js" crossorigin="anonymous"></script>
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <title>Pub Quiz!</title>
 </head>
+
 <body>
+    <!--Header-->
     <h1 class="heading"> <i class="fa-solid fa-beer-mug-empty"></i> Pub Quiz </h1>
     <div class="game-area">
         <div class="category-container" id="category">
             <h1><span id="type-category"></span></h1>
         </div>
+        <!--Body - category area-->
         <div class="controls-area">
-            <button onclick="displaySportsQuestion()" data-type="Sports" aria-label="sports category" class="btn btn--big btn--green game-button selected" class="active"><i class="fa-solid fa-baseball-bat-ball"></i></button>
-            <button onclick="displayMoviesQuestion()" data-type="Movies" aria-label="movies category"class="btn btn--big btn--blue game-button selected" class="active"><i class="fa-solid fa-film"></i></button>
-            <button onclick="displayGeographyQuestion()" data-type="Geography" aria-label="geography category" class="btn btn--big btn--purple game-button selected" class="active"><i class="fa-solid fa-earth-americas"></i></button>
-            <button onclick="displayHistoryQuestion()" data-type="History" aria-label="history category" class="btn btn--big btn--red game-button selected" class="active"><i class="fa-solid fa-landmark"></i></button>
+            <button onclick="displaySportsQuestion()" data-type="Sports" aria-label="sports category"
+                class="btn btn--big btn--green game-button selected" class="active"><i
+                    class="fa-solid fa-baseball-bat-ball"></i></button>
+            <button onclick="displayMoviesQuestion()" data-type="Movies" aria-label="movies category"
+                class="btn btn--big btn--blue game-button selected" class="active"><i
+                    class="fa-solid fa-film"></i></button>
+            <button onclick="displayGeographyQuestion()" data-type="Geography" aria-label="geography category"
+                class="btn btn--big btn--purple game-button selected" class="active"><i
+                    class="fa-solid fa-earth-americas"></i></button>
+            <button onclick="displayHistoryQuestion()" data-type="History" aria-label="history category"
+                class="btn btn--big btn--red game-button selected" class="active"><i
+                    class="fa-solid fa-landmark"></i></button>
         </div>
+        <!--display question-->
         <div class="question-area">
             <h1 id="display-question"></h1>
             <div class="opening-container" id="opening">
                 <h1>Please Select A Category To Start The Game!</h1>
             </div>
         </div>
+        <!--container for right, incorrect answers and quiz end score-->
         <div class="container" id="options-container-modal">
             <div class="display-container">
                 <h1>Please Pick An option!</h1>
@@ -71,7 +86,9 @@
 
                     <p>Grade : <span id="grade-percentage"></span>%</p>
 
-                    <p><spn id="remarks"></spn></p>
+                    <p>
+                        <spn id="remarks"></spn>
+                    </p>
 
                 </div>
                 <div class="button-container">
@@ -79,21 +96,25 @@
                 </div>
             </div>
         </div>
+        <!--selectable options for user-->
         <div class="options-area">
             <span onclick="selected(this)" class="option" id="option1" class="chosen">0</span>
             <span onclick="selected(this)" class="option" id="option2" class="chosen">0</span>
             <span onclick="selected(this)" class="option" id="option3" class="chosen">0</span>
-        </div> 
-    <div id="button-container"> 
-        <div id="submit-button">
-            <button data-type="submit" onclick="checkAnswer()" class="submit">Submit Answer</button>
         </div>
-    </div> 
+        <!--submit button-->
+        <div id="button-container">
+            <div id="submit-button">
+                <button data-type="submit" onclick="checkAnswer()" class="submit">Submit Answer</button>
+            </div>
+        </div>
     </div>
+    <!--footer with score and question number-->
     <footer class="score-area">
         <p>Score: <span id="player-score"></span>/10</p>
         <p>Question: <span id="question-number"></span>/10</p>
     </footer>
-   <script src="assets/js/script.js"></script> 
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

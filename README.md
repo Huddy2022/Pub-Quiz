@@ -12,6 +12,7 @@ The pub quiz is a site aimed for any enthusiast of general knowledge that wants 
 
   - Created a favicon for the website as a beer mug as a bit of fun for the user to feel more like a pub theme.
 
+![Favicon](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Favicon.jpg)
 - __Header__
 
   - The header grabs the attention of the user and with the help of the help of the font awesome Icon give its a bit of fun.

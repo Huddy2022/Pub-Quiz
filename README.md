@@ -169,7 +169,7 @@ The pub quiz is a site aimed for any enthusiast of general knowledge that wants 
   - From the source section drop-down menu, select the Main Branch
   - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - https://huddy2022.github.io/Mind-Body-project/
+The live link can be found here - https://huddy2022.github.io/Pub-Quiz/
 
 
 ## Credits ##

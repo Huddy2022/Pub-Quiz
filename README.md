@@ -1,162 +1,162 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Pub Quiz #
 
-Mind and body is a site that is aimed at helping any age or fitness level, learn methods of body/mind self improvement techniques through classes in yoga and pilates. The site will be targeted to men and women of any age and fitness level, who are looking for a way to socialise and keep their mind and body fit. Mind and body will be useful in a way that the user will be able to learn new techniques/exercises/poses to improve the body/mind and to be able to choose classes that fits around their lifestyle.
+The Live link can be found here - https://huddy2022.github.io/Pub-Quiz/
 
-Responsive Mockup
+The pub quiz is a site aimed for any enthusiast of general knowledge that wants to challenge themselves with a fun quiz, with a variety of categories ranging from sports, movies, geography and history. The site will be targeted to a ranged audience of early teens to adults that have a keen interest in challenging themselves in a variety of subjects to test their general knowledge skills. The pub quiz can be challenging but encourages the user to push themselves to a achieve a perfect score in each category (thanks to the final score container), and even if they dont succeed first time around the user will be allowed to try again as many times as they wish until they reach 100% on any given category. If a question is answered wrong the computer will generate the right answer so the user can understand and learn.
 
-Features
-Home
-Navigation Bar
+![Responsive Mockup]()
 
-Featured on all four pages, the full responsive navigation bar includes links to the Logo, Home page, classes, and Sign Up page and is identical in each page to allow for easy navigation.
-The thankyou page is reached when the sign up form is complete and offers the full navigation bar for the user to naviagte back through the site.
-The logo is linked to the home page so any user can easily navigate to the main home page through this logo.
-This section will allow the user to easily navigate from page to page across all devices without having to revert back to the previous page via the ‘back’ button.
-The navigation is in white with a navy blue background to have an easy contrast for users.
-Home, classes and signup have a class="active" attribute that allows the user to understand which page they are on by being underlined.
-When hovering over any of the navigation pages a background color appeaers to help the user understand which naviagtion to click.
-Nav Bar
+## Features ##
 
-Home hero image and header
+- __Favicon__
 
-The header includes a photograph with text overlay to allow the user to understand what the site is about.
-This section introduces the user to Mind & Body with a coloful picture of meditation.
-The header explains the site offers classes for any age group to learn new techniques with the mind and body.
-Home Page
+  - Created a favicon for the website as a beer mug as a bit of fun for the user to feel more like a pub theme.
 
-Club Ethos Section
+- __Header__
 
-The club ethos section will allow the user to see the benefits of joining the Mind & Body club, as well as the benefits of doing either yoga or pilates.
-The user will see the value of signing up for the mind & body club and have the benefits of each type of class.
-Font awesome icons help to visualise what either yoga or pilates focus on.
-Both images clearly display type of technqiues for either yoga or pilates.
-Club Ethos
+  - The header grabs the attention of the user and with the help of the help of the font awesome Icon give its a bit of fun.
+  - Explains to the user simply what this website is all about
 
-About us section
+![Header]()
 
-The about us section gives a clear indication to what mind and body offers the user.
-This section also provides an understanding to how the club operates on different day and times through its opening hours table.
-About us
+### Game area ###
 
-Contact us footer
+![Game Area]()
 
-The contact us section encourages a user to get in contact with us using online platforms.
-The footer is valuable to the user as it offers a range of social media sites in which to get in contact with the mind and body club.
-Footer
+- __Categories__
 
-Classes
-image and header
+  - There are four categories in total, sports, movies, geography and history to offer the user variety.
+  - All categories have ten questions in total to make it challenging.
+  - Each category has a differnt color to give the overall webpage a bit more colourfull.
+  - Once you have selected a category the category title will be displayed at the top of the page to remind the user which category they are in.
+  - Once the user has selected a category the category buttons are disabled so the user has to complete the current quiz before starting another category.
+  - Once the user has completed the quiz all the category buttons are enabled again.
+  - At the start of the game there is a heading alerting the user they must select a category to start the game.
 
-The main image and cover text explain the classes page to user
-The cover text is aimed to entice the user to read the relevant sections for yoga and pilates and entice them to pick a class
-Classes header
+![Active category]()
 
-club classes section
+- __Display Question__
 
-In this section it is divided into two divs for either yoga and pilates to give the user a choice on which they would prefer.
-The h2 and h3 headers are are aimed to draw the attention of the user and with the background of white on h3 make it easier for the user to understand the text.
-Both lists clearly offer a variety of different poses and exercises for either yoga or pilates to help the user understand what each class would entail.
-Font awesome icons are again used to highlight each classes strength.
-Club classes
+  - The display question is wrapped in a container with a black background and yellow border to stand out.
+  - Each question is displayed in this contained and a font color of white to be easily readable. 
+  - The question will be hidden at the start of the game until the user has selected a category.
+  - Once the user has submited an answer from the options the displayed question will autmotically change to the next question.
 
-class prices
+![Display Question]()
 
-In this section there is a table outlining the costs of each class and the cost for each class on different days of the week
+- __Options section__
 
-The h3 part gives the user the understanding of what the section is about and the table outlines each area easily for the user to understand.
+  - The options section is wrapped in a similar container to the display question to give a better contrast on the game area.
+  - In the options section there are three options for the user to click on.
+  - Each option will turn green once the user has selected which answer they wish to go for.
+  - The user is allowed to change their answer to a different option before they click submit.
+  - The option buttons are hidden at the start of the game until the user has selected a category.
+  - The user must select an option, otherwise if they click submit a pop up container will come up alerting the user to pick an option before moving forward.
+  - Once the user has selceted and option and clicked submit, the option colors will revert back to white for the next question. 
 
-class prices
+- __Submit button__
 
-Sign up page
-The Sign Up Page
+   - The submit button is background yellow to stand out with black font to contrast well together.
+   - The submit button has an onclick event which links to the checkAnswer function
+   - Once the user has clicked on submit it will either check the option the user has selected or if nothing chosen will pop up with the please pick an option container.
+   - If the user has selected the correct option, after clicking submit a pop up container saying congratulations will appear.
+   - If the user has selected the incorrect option, after submit a pop up container saying incorrect answer and will show the user the right answer, so they can learn from it.
+   - If the user clicks submit and all the questions have been answered it will pop up with the end game score container.
+   - The submit button will be disabled at the start of the game until the user has selected a category.
 
-This page will allow the user to get signed up to mind and body and offer the user the choice of either yoga, pilates or both.
-With the drop down menu it will also allow the user to have a choice of not just which class they would like to sign up for but also which days of the week best suit them.
-The background image of meditation is designed to make the user feel relaxed in which class they wish to sign up for.
-Each input is required so that the user knows what to do moving forward with the page.
-Sign Up
+![options & submit]()
 
-Thank you page
-The thank you page
+- __Pop up container__
 
-Once you have signed up with mind and body, you will be sent to a new page which is the thank you page, which is designed to make the user feel they have made a great choice.
+  - The pop up container is ther to alert the user on what they have done or what they should be doing.
+  - There is a container to alert the user if they havent clicked on an option.
+  - There is a container to alert the user if it was the correct answer with a font awesome smiley face.
+  - Another container for the incorrect answer with a sad face and the correct answer displayed to help the user.
+  - The final container works in three ways depending on what the users score is, such as a low, medium or 100%.
 
-Thank you
+![pick an option]()
+![correct answer]()
+![incorrect answer]()
+![low score end game]()
+![medium score end game]()
+![100% end game]()
 
-Testing
-Testing
+- __Player score and Question number footer__ 
 
-I tested my page on different browsers such as google chrome and microsoft edge and both worked fine
+  - The player score will start on 0 and will be updated on each answer the user gets correct
+  - The question number will start on 1 and will be updated when the user has submitted there answer on the previous question.
+  - Once the user has completed one of the category quiz's the player score and question number will be reset.
 
-I confirmed my page is responsive, looks good and functions on different devices such as computer, tablet and phone by using dev tools device toolbar.
+![Footer](https://github.com/Huddy2022/Mind-Body-project/blob/main/assets/images/footer.jpg)
 
-I confirmed the header, logo, navigation, club ethos, about us, footer, classes section, sign up and thank you page text are readable and easy to understand.
+## Testing ##
 
-I have confirmed that the form works on the sign up page, with all sections required to have been filled out, an email address in the email input and the submit button works and links to the thank you page.
+- __Testing__
 
-I confirmed all three social network links work on all four pages and open on a separate tab.
+- I tested my page on different browsers such as google chrome and microsoft edge and both worked fine
+- I confirmed my page is responsive, looks good and functions on different devices such as computer, tablet and phone by using dev tools device toolbar.
+- I confirmed the header, logo, navigation, club ethos, about us, footer, classes section, sign up and thank you page text are readable and easy to understand.
+- I have confirmed that the form works on the sign up page, with all sections required to have been filled out, an email address in the email input and the submit button works and links to the thank you page.
+- I confirmed all three social network links work on all four pages and open on a separate tab.
 
-Validator Testing
-HTML
+### Validator Testing ###
 
-Orginally i had 6 errors on the index.html, 4 errors on the classes.html, 1 error on the signup.html and 6 errors on the thankyou.html.
+- __HTML__
+- Orginally i had 8 errors on the index.html.
+- I can confirm now, no errors were returned when passing through the official w3c validator.
 
-I can confirm now, no errors were returned when passing through the official w3c validator on all four pages.
+  ![W3C validator]()
 
-W3C validator
+- __CSS__
+- Orginally i had one error on my style.css.
+  - I can confirm now, no errors were found when passing through the official w3c css validator.
+  
+   ![(Jigsaw) validator]()
 
-CSS
+- __Javascript__
+- 
 
-Orginally i had two errors on my style.css.
+- __Accessibility__
+- I confirmed the colors and fonts are easy to read and i tested the colors i have chosen through the webaim contrast checker.
+- I used the lighthouse in dev tools to test my web page on a desktop and mobile devices.
 
-I can confirm now, no errors were found when passing through the official w3c css validator.
-(Jigsaw) validator
+![Lighthouse]()
 
-Accessibility
+### Bugs ###
 
-I confirmed the colors and fonts are easy to read and accesibile by running it through lighthouse in dev tools for all four pages.
+- First bug i had was my hero image wasnt loading, but i manged to change its position, height and width in style.css to fix this
+- Second bug was my about us list and table not fitting together on the screen or overlapping each other. I fixed this with by adding a class and ID attritbute to both and styled them in css.
+- Third bug was getting the font awesome icons to work. I fixed this when i found out i hadnt added the font awesome script to the bottom of the page.
+- Fourth bug was the load time on the hero image being too long. I fixed this as best i can by changing its pixel size and re adding the image.
+- Fifth bug was the media quieries not aligning with the code i was setting up. I fixed this by re going over the course work and understanding the postions, floats and margins better and implented this in the style.css media queries section.
 
-Lighthouse
+### Un fixed bugs ###
 
-Bugs
-First bug i had was my hero image wasnt loading, but i manged to change its position, height and width in style.css to fix this
-Second bug was my about us list and table not fitting together on the screen or overlapping each other. I fixed this with by adding a class and ID attritbute to both and styled them in css.
-Third bug was getting the font awesome icons to work. I fixed this when i found out i hadnt added the font awesome script to the bottom of the page.
-Fourth bug was the load time on the hero image being too long. I fixed this as best i can by changing its pixel size and re adding the image.
-Fifth bug was the media quieries not aligning with the code i was setting up. I fixed this by re going over the course work and understanding the postions, floats and margins better and implented this in the style.css media queries section.
-Un fixed bugs
-No unfixed bugs left in the code.
-Deployment
-The site was deployed to GitHub pages. The steps to deploy are as follows:
-In the GitHub repository, navigate to the Settings tab
-From the source section drop-down menu, select the Main Branch
-Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+- No unfixed bugs left in the code.
+
+## Deployment ##
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the GitHub repository, navigate to the Settings tab 
+  - From the source section drop-down menu, select the Main Branch
+  - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+
 The live link can be found here - https://huddy2022.github.io/Mind-Body-project/
 
-Credits
-Content
-The text for the Home page (yoga) was taken from https://www.urmc.rochester.edu/encyclopedia/content.aspx?contenttypeid=1&contentid=2767
-The text for the Home page (pilates) was taken from https://dianesingleton.com/pilates
-The list content for the yoga classes was taken from https://www.myprotein.com/thezone/training/10-basic-yoga-exercises-for-beginners-yoga-made-easy/
-The list content for the pilated classes was taken from https://www.healthline.com/health/fitness/pilates-exercises
-The icons in the footer were taken from Font Awesome
-The code to make the header and navigation was taken from CI love running project
-Part of the code for the footer was taken from the CI love running project
-Part of the code for the sign up form was used from the love running project
-Media
-All images on pages home, classes, signup and thankyou were taken from pexels.
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
 
+## Credits ##
+
+### Content ###
+
+- The text for the Home page (yoga) was taken from https://www.urmc.rochester.edu/encyclopedia/content.aspx?contenttypeid=1&contentid=2767
+- The text for the Home page (pilates) was taken from https://dianesingleton.com/pilates
+- The list content for the yoga classes was taken from https://www.myprotein.com/thezone/training/10-basic-yoga-exercises-for-beginners-yoga-made-easy/
+- The list content for the pilated classes was taken from https://www.healthline.com/health/fitness/pilates-exercises
+- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- The code to make the header and navigation was taken from CI love running project
+- Part of the code for the footer was taken from the CI love running project
+- Part of the code for the sign up form was used from the love running project
+
+### Media ###
+
+- All images on pages home, classes, signup and thankyou were taken from pexels.

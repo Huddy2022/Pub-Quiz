@@ -76,7 +76,7 @@ body {
 }
 
 .display-container {
-    height: 20rem;
+    height: 350px;
     width: 25rem;
     background-color: black;
     border: 5px solid darkred;

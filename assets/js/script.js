@@ -266,8 +266,8 @@ const historyQuestions = [{
       question: ["What were the first names of poet W H Auden?"],
       optionA: ["Wallace Han"],
       optionB: ["William Hugh"],
-      optionC: ["Wystan Hugh "],
-      correctOption: "Wystan Hugh "
+      optionC: ["Wystan Hugh"],
+      correctOption: "Wystan Hugh"
    },
    {
       question: ["Seppuku, part of the code of Samurai warriors, is better known by what name?"],

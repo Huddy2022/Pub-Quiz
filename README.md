@@ -87,18 +87,38 @@ The pub quiz is a site aimed for any enthusiast of general knowledge that wants 
   - The question number will start on 1 and will be updated when the user has submitted there answer on the previous question.
   - Once the user has completed one of the category quiz's the player score and question number will be reset.
 
-![Footer](https://github.com/Huddy2022/Mind-Body-project/blob/main/assets/images/footer.jpg)
+![Footer]()
 
 ## Testing ##
 
 - __Testing__
 
-- I tested my page on different browsers such as google chrome and microsoft edge and both worked fine
-- I confirmed my page is responsive, looks good and functions on different devices such as computer, tablet and phone by using dev tools device toolbar.
-- I confirmed the header, logo, navigation, club ethos, about us, footer, classes section, sign up and thank you page text are readable and easy to understand.
-- I have confirmed that the form works on the sign up page, with all sections required to have been filled out, an email address in the email input and the submit button works and links to the thank you page.
-- I confirmed all three social network links work on all four pages and open on a separate tab.
+| Tested  | Display  | Fits in container | Disables/Hide/Visible | Media Quieries | Display title | On click function| hover/click color change| Resets end game/updates during|
+| :------------ |:---------------:| :-----:| :------------:| :------------:| :-------------:| :-------:| :--------:| -------:|
+| Sports Category | Displays all questions | Yes | Works | fits on all screens | Yes| Works| Works|n/a|
+| Movies Category  | Displays all questions | Yes | Works| fits on all screens | Yes| Works|Works|n/a|
+| Geography Category | Displays all questions | Yes| Works | fits on all screens | Yes|Works|Works|n/a|
+| History Category | Displays all questions | Yes| Works | fits on all screens | Yes|Works|Works|n/a|
+| Opening container | Displays heading | Yes| Works | fits on all screens | n/a|n/a|n/a|Works|
+| Option one | Displays all option 1 answers | Yes| Works | fits on all screens | n/a|Works|Works|Works|
+| Option two | Displays all option 2 answers | Yes| Works | fits on all screens | n/a|Works|Works|Works|
+| Option three | Displays all option 3 answers | Yes| Works | fits on all screens | n/a|Works|Works|Works|
+| Submit | Displays submit answer| Yes| Works | fits on all screens | n/a|Works|Works|n/a|
+| Player score | Displays player score| Yes| Works | fits on all screens | n/a|Works|Works|Works|
+| Question Number | Displays question number| Yes| n/a | fits on all screens | n/a|Works|Works|Works|
+| Display Container| Displays please pick an option| Yes| Works | fits on all screens | n/a|Works|Works|Works|
+| Display Container| Displays correct answer| Yes| Works | fits on all screens | n/a|Works|Works|Works|
+| Display Container| Displays incorrect answer| Yes| Works | fits on all screens | n/a|Works|Works|Works|
+| Display Container| Displays low score result| Yes| Works | fits on all screens | n/a|Works|Works|Works|
+| Display Container| Displays medium score result| Yes| Works | fits on all screens | n/a|Works|Works|Works|
+| Display Container| Displays 100% result| Yes| Works | fits on all screens | n/a|Works|Works|Works|
 
+- I have tested through the whole the game, making sure all the questions are shown and fit in the display box. 
+- All categories work once clicked and disabled once in the quiz, plus the category title shown once in the quiz. 
+- I have also checked the player score and question number works throughout and even resets at the end of each game.
+- All option buttons works, with the correct answers and onlick function to turn green.
+- All the display containers work and show the relevant information to the user during the game.
+ 
 ### Validator Testing ###
 
 - __HTML__
@@ -111,28 +131,36 @@ The pub quiz is a site aimed for any enthusiast of general knowledge that wants 
 - Orginally i had one error on my style.css.
   - I can confirm now, no errors were found when passing through the official w3c css validator.
   
-   ![(Jigsaw) validator]()
+   ![Jigsaw validator]()
 
 - __Javascript__
-- 
+- I used the JSHint and orginally had 19 warnings. I can confirm there are no more warnings. JSHint is throwing some false positives regarding the undefined variables, but i have checked the console and the code works and there are no red dots next to my code. It also mentions about I have three unused variables but all three are used through the onClick event instead.
+
+   ![JSHint validator]()
 
 - __Accessibility__
 - I confirmed the colors and fonts are easy to read and i tested the colors i have chosen through the webaim contrast checker.
 - I used the lighthouse in dev tools to test my web page on a desktop and mobile devices.
 
-![Lighthouse]()
+![Lighthouse mobile]()
+![Lighthouse desktop]()
 
 ### Bugs ###
 
-- First bug i had was my hero image wasnt loading, but i manged to change its position, height and width in style.css to fix this
-- Second bug was my about us list and table not fitting together on the screen or overlapping each other. I fixed this with by adding a class and ID attritbute to both and styled them in css.
-- Third bug was getting the font awesome icons to work. I fixed this when i found out i hadnt added the font awesome script to the bottom of the page.
-- Fourth bug was the load time on the hero image being too long. I fixed this as best i can by changing its pixel size and re adding the image.
-- Fifth bug was the media quieries not aligning with the code i was setting up. I fixed this by re going over the course work and understanding the postions, floats and margins better and implented this in the style.css media queries section.
+- intially i tried a similar approach to the love maths project and tried a for loop with add event listners to start the game, but it didnt seem to work with the array questions - i fixed this by removing the add event listeners and focused on a onclick event with the submit and category buttons which would like to the rungame function and check answer function instead.
+- one bug was getting the rungame function to correctly work. I corrected this bug by creating a game entry function to stop the game from starting until the user had clicked on a category.
+- On the game entry it was looping through the whole game. I fixed this by hidding the visibilty of the options and disbaling the submit button until user had selected a category.
+- Once a category quiz had started the user could click on another category which would carry on the same question number in the next category array. I fixed this by disabling the category buttons once the user had selected a category and started the quiz.
+- When a category was chosen a bug i had was the computer didnt transfer through the next question in the array when a user submitted an answer - I fixed this by using the creating a variable index = 0 and added index++ when submitted correctly.
+- checkanswer function was collecting the correct option in the array - i fixed this by .dataset.chosen which collected the correct option from the array and added it to the classname which was being submitted.
+- next issue was once the user had selected the next question the previous correct answer was fixed which created all further question answers to be wrong - i fixed this by creating an unselect function which re set the array so when the next question had started the new correct answer will come from that array and not the previous question.
+- when the user selected an option, it turned green but when the user submitted the answer and went to the next question the option would stay green - I fixed this by making a makewhite function to turn all the options back to white when the submit button was called.
+- near the end the final score container continue button looped back through the run game function and basically started the same category quiz again without the users permitting this - i fixed this by using if and else statements and working the dom to go through and finish in the game entry function instead. 
+
 
 ### Un fixed bugs ###
 
-- No unfixed bugs left in the code.
+- its not an unfixed bug, but i couldnt get the hover function to work on the options. It worked on the orginal question but once the makewhite function kicked in, i coudnt get the hover green to work properly afterwards. In the end i removed this function unfortunatley. 
 
 ## Deployment ##
 
@@ -156,7 +184,3 @@ The live link can be found here - https://huddy2022.github.io/Mind-Body-project/
 - The code to make the header and navigation was taken from CI love running project
 - Part of the code for the footer was taken from the CI love running project
 - Part of the code for the sign up form was used from the love running project
-
-### Media ###
-
-- All images on pages home, classes, signup and thankyou were taken from pexels.

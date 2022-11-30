@@ -4,7 +4,7 @@ The Live link can be found here - https://huddy2022.github.io/Pub-Quiz/
 
 The pub quiz is a site aimed for any enthusiast of general knowledge that wants to challenge themselves with a fun quiz, with a variety of categories ranging from sports, movies, geography and history. The site will be targeted to a ranged audience of early teens to adults that have a keen interest in challenging themselves in a variety of subjects to test their general knowledge skills. The pub quiz can be challenging but encourages the user to push themselves to a achieve a perfect score in each category (thanks to the final score container), and even if they dont succeed first time around the user will be allowed to try again as many times as they wish until they reach 100% on any given category. If a question is answered wrong the computer will generate the right answer so the user can understand and learn.
 
-![Responsive Mockup]()
+![Responsive Mockup](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Am-I-Responsive.jpg)
 
 ## Features ##
 
@@ -17,11 +17,11 @@ The pub quiz is a site aimed for any enthusiast of general knowledge that wants 
   - The header grabs the attention of the user and with the help of the help of the font awesome Icon give its a bit of fun.
   - Explains to the user simply what this website is all about
 
-![Header]()
+![Header](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Header.jpg)
 
 ### Game area ###
 
-![Game Area]()
+![Game Area](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Game-Area.jpg)
 
 - __Categories__
 
@@ -33,7 +33,7 @@ The pub quiz is a site aimed for any enthusiast of general knowledge that wants 
   - Once the user has completed the quiz all the category buttons are enabled again.
   - At the start of the game there is a heading alerting the user they must select a category to start the game.
 
-![Active category]()
+![Active category](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Category-Actioned.jpg)
 
 - __Display Question__
 
@@ -42,7 +42,7 @@ The pub quiz is a site aimed for any enthusiast of general knowledge that wants 
   - The question will be hidden at the start of the game until the user has selected a category.
   - Once the user has submited an answer from the options the displayed question will autmotically change to the next question.
 
-![Display Question]()
+![Display Question](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Display-Question.jpg)
 
 - __Options section__
 
@@ -64,7 +64,7 @@ The pub quiz is a site aimed for any enthusiast of general knowledge that wants 
    - If the user clicks submit and all the questions have been answered it will pop up with the end game score container.
    - The submit button will be disabled at the start of the game until the user has selected a category.
 
-![options & submit]()
+![options & submit](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Options-%26-Submit.jpg)
 
 - __Pop up container__
 
@@ -74,12 +74,12 @@ The pub quiz is a site aimed for any enthusiast of general knowledge that wants 
   - Another container for the incorrect answer with a sad face and the correct answer displayed to help the user.
   - The final container works in three ways depending on what the users score is, such as a low, medium or 100%.
 
-![pick an option]()
-![correct answer]()
-![incorrect answer]()
-![low score end game]()
-![medium score end game]()
-![100% end game]()
+![pick an option](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/pick-an-option.jpg)
+![correct answer](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Correct-option.jpg)
+![incorrect answer](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Incorrect-option.jpg)
+![low score end game](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/low-end-score.jpg)
+![medium score end game](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Medium-end-score.jpg)
+![100% end game](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/100%25-end-score.jpg)
 
 - __Player score and Question number footer__ 
 
@@ -87,7 +87,7 @@ The pub quiz is a site aimed for any enthusiast of general knowledge that wants 
   - The question number will start on 1 and will be updated when the user has submitted there answer on the previous question.
   - Once the user has completed one of the category quiz's the player score and question number will be reset.
 
-![Footer]()
+![Footer](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Score-Area.jpg)
 
 ## Testing ##
 
@@ -125,25 +125,25 @@ The pub quiz is a site aimed for any enthusiast of general knowledge that wants 
 - Orginally i had 8 errors on the index.html.
 - I can confirm now, no errors were returned when passing through the official w3c validator.
 
-  ![W3C validator]()
+  ![W3C validator](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/W3C-Markup-validator.jpg)
 
 - __CSS__
 - Orginally i had one error on my style.css.
   - I can confirm now, no errors were found when passing through the official w3c css validator.
   
-   ![Jigsaw validator]()
+   ![Jigsaw validator](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/W3C-CSS-validator.jpg)
 
 - __Javascript__
 - I used the JSHint and orginally had 19 warnings. I can confirm there are no more warnings. JSHint is throwing some false positives regarding the undefined variables, but i have checked the console and the code works and there are no red dots next to my code. It also mentions about I have three unused variables but all three are used through the onClick event instead.
 
-   ![JSHint validator]()
+   ![JSHint validator](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/JShint.jpg)
 
 - __Accessibility__
 - I confirmed the colors and fonts are easy to read and i tested the colors i have chosen through the webaim contrast checker.
 - I used the lighthouse in dev tools to test my web page on a desktop and mobile devices.
 
-![Lighthouse mobile]()
-![Lighthouse desktop]()
+![Lighthouse mobile](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Mobile-lighthouse.jpg)
+![Lighthouse desktop](https://github.com/Huddy2022/Pub-Quiz/blob/main/assets/images/Desktop-lighthouse.jpg)
 
 ### Bugs ###
 

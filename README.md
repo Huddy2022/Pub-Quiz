@@ -180,5 +180,6 @@ The live link can be found here - https://huddy2022.github.io/Pub-Quiz/
 - The questions and answers for the geography questions was taken from https://www.radiotimes.com/quizzes/pub-quiz-geography/.
 - The questions and answers for the history questions was taken from https://quizglobal.com/quizplay/quizplayqanda/History%20Pub%20Quiz%20Questions%20and%20Answers.
 - The icons used were taken from font awesome https://fontawesome.com.
+- The favicon used was taken from https://favicon.io/emoji-favicons/.
 - The love maths project helped me with the code for the category buttons and game area.
 - This site helped me with the code for my display question, options buttons, submit button and display containers - https://dev.to/sulaimonolaniran/building-a-simple-quiz-with-html-css-and-javascript-4elp

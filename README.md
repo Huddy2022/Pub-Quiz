@@ -175,11 +175,10 @@ The live link can be found here - https://huddy2022.github.io/Pub-Quiz/
 
 ### Content ###
 
-- The text for the Home page (yoga) was taken from https://www.urmc.rochester.edu/encyclopedia/content.aspx?contenttypeid=1&contentid=2767
-- The text for the Home page (Pilates) was taken from https://dianesingleton.com/pilates
-- The list content for the yoga classes was taken from https://www.myprotein.com/thezone/training/10-basic-yoga-exercises-for-beginners-yoga-made-easy/
-- The list content for the Pilates classes was taken from https://www.healthline.com/health/fitness/pilates-exercises
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-- The code to make the header and navigation was taken from CI love running project
-- Part of the code for the footer was taken from the CI love running project
-- Part of the code for the sign up form was used from the love running project
+- The questions and answers for the sports questions was taken from https://www.mirror.co.uk/sport/50-sport-quiz-questions-answers-22026700.
+- The questions and answers for the movies questions was taken from https://www.radiotimes.com/quizzes/pub-quiz-film/.
+- The questions and answers for the geography questions was taken from https://www.radiotimes.com/quizzes/pub-quiz-geography/.
+- The questions and answers for the history questions was taken from https://quizglobal.com/quizplay/quizplayqanda/History%20Pub%20Quiz%20Questions%20and%20Answers.
+- The icons used were taken from font awesome https://fontawesome.com.
+- The love maths project helped me with the code for the category buttons and game area.
+- This site helped me with the code for my display question, options buttons, submit button and display containers - https://dev.to/sulaimonolaniran/building-a-simple-quiz-with-html-css-and-javascript-4elp
